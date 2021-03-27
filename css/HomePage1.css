@@ -5119,3 +5119,15 @@ label {
   margin-right: 5px;
 }
 /*# sourceMappingURL=main.0cf8b554.map*/
+
+.st_img {
+  border-radius: 50%;
+}
+
+.st_img.bigger {
+  height: 350px;
+}
+
+/* .check {
+  font-family: "times New Roman", Arial, verdana, "sans serif";
+} */
