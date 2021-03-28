@@ -4848,7 +4848,11 @@ button.close {
 .navbar-brand > .navbar-logo-img {
   display: inline-block;
   margin-top: -5px;
+  margin-left: -100px;
+  width: 80px;
+  height: 80px;
 }
+
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #fff;
 }
@@ -5119,3 +5123,16 @@ label {
   margin-right: 5px;
 }
 /*# sourceMappingURL=main.0cf8b554.map*/
+
+.st_img {
+  border-radius: 50%;
+}
+
+.st_img.bigger {
+  height: 350px;
+}
+
+.check {
+  /* font-family: Arial, Helvetica, "sans-serif"; */
+  font-family: Arial;
+}
