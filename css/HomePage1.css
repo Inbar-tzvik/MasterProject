@@ -4845,12 +4845,15 @@ button.close {
     margin-bottom: 60px;
   }
 }
-.navbar-brand > .navbar-logo-img {
+.navbar-logo-img {
   display: inline-block;
-  margin-top: -5px;
-  margin-left: -100px;
+  margin-top: -30px;
+  margin-left: -45px;
   width: 80px;
   height: 80px;
+}
+.navbar-brand {
+  margin-top: 10px;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
