@@ -1,1 +1,16 @@
+/* .abc {
+  text-align: right;
+  direction: rtl;
+} */
 
+.abc {
+  float: right;
+  width: 20%;
+  text-align: right;
+}
+
+.one {
+  float: right;
+  width: 50%;
+  float: right;
+}
