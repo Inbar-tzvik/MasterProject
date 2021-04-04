@@ -79,7 +79,7 @@
         </div>
 
          <div id="block1">
-        <form name="MyForm"   action="*"                  onsubmit="return myFunction()" method="post">
+        <form name="MyForm"   action="../php/findRole.php"                  onsubmit="return myFunction()" method="post">
 
             <!-- <section class="one"> -->
          
@@ -122,8 +122,9 @@
 
                  <section class="one">
                 <label for="text">	אוריינטציה ניהולית </label>
-                <input  type="range" value="0" min="0" max="100" oninput="this.nextElementSibling.value = this.value">
+                <input  type="range" value="0" min="0" max="100" oninput="this.nextElementSibling.value = this.value" name="management" id="management">
                 <output>0</output>
+               <div id="managementErr" class="error" ></div>
 
         
 
@@ -179,6 +180,17 @@
                 </div>
               </section>
             <!-- </section> -->
+
+
+            <div id="statusMessage"> 
+              <?php
+              if (! empty($message)) {
+                  ?>
+                  <p> <?php echo $message; ?></p>
+              <?php
+              }
+              ?>
+          </div>
        
             </form>
         </div>
@@ -312,6 +324,7 @@
 
 <script defer src="../js/headerfooter.js"></script>
 <script type="text/javascript" src="./js/findRole.js"></script>
+<script type="text/javascript" src="./js/roleValid.js"></script>
 <script type="text/javascript" src="./js/main.0cf8b554.js"></script></body>
 
 </html>
