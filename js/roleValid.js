@@ -1,7 +1,7 @@
 function myFunction() {
 
 
-  // לבצע התאמות
+  // בודק אם המשתמש בחר מספר בין 1-10
     var numbers = /^[+]?[1-10]+$/;
     if(!management.value.match(numbers)){
          text = "The number need to be between 1-6";
