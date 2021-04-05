@@ -228,9 +228,7 @@ th {
   h3 {
     page-break-after: avoid;
   }
-  .navbar {
-    display: none;
-  }
+
   .btn > .caret,
   .dropup > .btn > .caret {
     border-top-color: #000 !important;
@@ -4847,10 +4845,14 @@ button.close {
 }
 .navbar-brand > .navbar-logo-img {
   display: inline-block;
-  margin-top: -5px;
-  margin-left: -100px;
+  margin-top: -22px;
+  margin-left: -50px;
   width: 80px;
   height: 80px;
+}
+
+.navbar-alt {
+  margin-top: 100px;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
