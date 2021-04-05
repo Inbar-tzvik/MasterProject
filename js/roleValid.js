@@ -4,12 +4,18 @@ function myFunction() {
   // בודק אם המשתמש בחר מספר בין 1-10
     var numbers = /^[+]?[1-10]+$/;
     if(!management.value.match(numbers)){
-         text = "The number need to be between 1-6";
+         text = "נראה שיש תחום עניין שעדיין 0 , רק בודקים שלא שכחת";
      document.getElementById("managementErr").innerHTML = text;
      managementErr= false;
     }
 
 
+    // אולי זה בדיקה למשתמש
+
+
+
+
+    
 
     if((managementErr) === true) {
         
