@@ -1,7 +1,8 @@
+
 <?php
 $server_name = "localhost";
-$username = "UserPro"; //check
-$password = "l!m@i#123lmi!@#";
+$username = "maycois";
+$password = "WwSVtsJ1pMl6";
 $database = "maycois_MasterProject";
 
 
@@ -26,8 +27,9 @@ echo "Connection successful";
 // $sql = "INSERT INTO `workshopres` (`firstname`,`lastname`,`email`,`phone`,`numofpar`,`privateroom`,`kosher`,`date`,`workshoptype`,`comments`) VALUES ('" . $firstname . "','" . $lastname . "','" . $email . "','" . $phone . "'," . $numofpar . ",'" . $privateroom . "','" . $kosher . "','" . $date . "','" . $workshoptype . "','" . $comments . "')";
 
 $management = $_POST['management'];
-
 $sql = "INSERT INTO `UsersPreferences` (`management`)  VALUES (" . $management . ")";
+
+
 
 
 
