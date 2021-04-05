@@ -27,7 +27,8 @@ echo "Connection successful";
 // $sql = "INSERT INTO `workshopres` (`firstname`,`lastname`,`email`,`phone`,`numofpar`,`privateroom`,`kosher`,`date`,`workshoptype`,`comments`) VALUES ('" . $firstname . "','" . $lastname . "','" . $email . "','" . $phone . "'," . $numofpar . ",'" . $privateroom . "','" . $kosher . "','" . $date . "','" . $workshoptype . "','" . $comments . "')";
 
 $management = $_POST['management'];
-$sql = "INSERT INTO `UsersPreferences` (`management`)  VALUES (" . $management . ")";
+$design = $_POST[`design`];
+$sql = "INSERT INTO `UsersPreferences` (`management`, `design`)  VALUES (" . $management . " , " . $design . ")";
 
 
 
