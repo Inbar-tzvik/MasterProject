@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Hind+Siliguri:300,600|Martel:400,900);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
 .dropup .caret,
 .navbar-fixed-bottom .dropdown .caret {
   border-top: 0;
@@ -610,4 +613,138 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
   font-weight: 700;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container:after,
+.container:before {
+  content: " ";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container-fluid:after,
+.container-fluid:before {
+  content: " ";
+  display: table;
+}
+.container-fluid:after {
+  clear: both;
+}
+
+.container-fluid > .navbar-collapse,
+.container-fluid > .navbar-header,
+.container > .navbar-collapse,
+.container > .navbar-header {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width: 768px) {
+  .container-fluid > .navbar-collapse,
+  .container-fluid > .navbar-header,
+  .container > .navbar-collapse,
+  .container > .navbar-header {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+@media (min-width: 768px) {
+  .navbar > .container-fluid .navbar-brand,
+  .navbar > .container .navbar-brand {
+    margin-left: -15px;
+  }
+}
+
+.section-container {
+  padding: 60px 0;
+}
+.section-container-spacer {
+  margin-bottom: 30px;
+}
+.hero-full-container {
+  padding: 20% 0;
+}
+@media (min-width: 992px) {
+  .hero-full-container {
+    padding: 15% 0;
+  }
+}
+.hero-container {
+  padding: 120px 0 60px;
+}
+.white-text-container a,
+.white-text-container h1,
+.white-text-container h2,
+.white-text-container h3,
+.white-text-container h4,
+.white-text-container h5,
+.white-text-container p {
+  color: #fff;
+}
+@media (max-width: 992px) {
+  .address-container {
+    margin-top: 20px;
+  }
+}
+.background-image-container {
+  text-align: center;
+  background-image: url(../images/wave-hero-background.svg);
+}
+.background-image-container,
+.footer-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.footer-container {
+  background-image: url(../images/wave-footer.svg);
+  padding: 60px 0;
+  margin-top: 30px;
+}
+
+.card-container .card-image {
+  height: 400px;
+  margin-top: -20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.collapse {
+  display: none;
+}
+.collapse.in {
+  display: block;
+}
+tr.collapse.in {
+  display: table-row;
+}
+tbody.collapse.in {
+  display: table-row-group;
 }
