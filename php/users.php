@@ -14,7 +14,6 @@ if ($conn->connect_error) {
 echo "Connection successful";
 
 
-$analysisCapabilities = $_POST[`analysisCapabilities`];
 
 
 $comment = $_POST[`comment`];
