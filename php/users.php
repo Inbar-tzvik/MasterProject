@@ -14,23 +14,13 @@ if ($conn->connect_error) {
 echo "Connection successful";
 
 
+$analysisCapabilities = $_POST[`analysisCapabilities`];
 
 
-$sql = "SELECT up.* ,r.management, r.software , r.workInATeam
-FROM UsersPreferences up
-LEFT JOIN roles r
-WHERE (software>= 0 AND software<=20 )
-and
- ( management >=40 AND management<=70) 
-and
- (workInATeam BETWEEN '50' AND '80')";
-
-
-
-$result =  mysql_query($sql);
-
-
-
+$comment = $_POST[`comment`];
+$subject = $_POST[`subject`];
+$email = $_POST[`email`];
+$sql = "INSERT INTO `User_information` (`comment`, `subject`,`email`)  VALUES ( '" . $comment . "','" . $subject . "','" . $email . "')";
 
 
 // $conn->query($sql);

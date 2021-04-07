@@ -275,17 +275,17 @@
           </div>
           <div  dir="rtl" class="card-container">
             <div class="card card-shadow col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 reveal">
-              <form  action="" class="reveal-content">
+              <form  action="" class="reveal-content" action="../php/users.php"  onsubmit="return myFunction()" method="post">
                 <div class="row">
                   <div class="col-md-7">
                     <div class="form-group">
-                      <input  type="email" class="form-control" id="email" placeholder="מייל">
+                      <input  type="email" class="form-control" id="email" placeholder="מייל" name="email" >
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control" id="subject" placeholder="נושא">
+                      <input type="text" class="form-control" id="subject" placeholder="נושא" name="subject">
                     </div>
                     <div class="form-group">
-                      <textarea class="form-control" rows="3" placeholder="רשום תגובה"></textarea>
+                      <textarea class="form-control" rows="3" placeholder="רשום תגובה" id= "comment" name="comment"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">שלח משוב</button>
                   </div>
