@@ -1,5 +1,9 @@
 function myFunction() {
 
+   
+  var  managementErr=designErr=softwareErr=workInATeamErr=umiDiagramOrientedErr=teachingErr=analysisCapabilitiesErr =true;
+
+
 
   // בודק אם המשתמש בחר מספר בין 1-10
     var numbers = /^[+]?[1-10]+$/;
@@ -17,7 +21,7 @@ function myFunction() {
 
     
 
-    if((managementErr) === true) {
+    if((managementErr && designErr && softwareErr && workInATeamErr && umiDiagramOrientedErr && teachingErr&& analysisCapabilitiesErr ) === true) {
         
        
         alert('The form has been sent successfully');
