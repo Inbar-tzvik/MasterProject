@@ -2,7 +2,7 @@
 function myFunction() {
     var x, text;
   
-    //  var  emailErr = subjectErr = commentErr =true;
+    var  emailErr = subjectErr = commentErr =true;
      
      
       //  אימייל
@@ -43,24 +43,22 @@ function myFunction() {
     
      
             
-      //   if((emailErr && subjectErr &&  commentErr ) === true) {
+        if((emailErr && subjectErr &&  commentErr ) === true) {
           
          
-      //         alert('The form has been sent successfully');
-      //              return true ;
-      // }
+               alert('The form has been sent successfully');
+                    return true ;
+       }
         
      
-      //   else{
-      //          return false ;
+         else{
+               return false ;
                  
                 
-      //       } 
+           } 
 
             
-    else{
-      alert('The form has been sent successfully');
-     }   
+  
      
   }
   

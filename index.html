@@ -301,6 +301,15 @@
 
                   </div>
                   
+                  <div id="statusMessage"> 
+                    <?php
+                    if (! empty($message)) {
+                        ?>
+                        <p> <?php echo $message; ?></p>
+                    <?php
+                    }
+                    ?>
+                </div>
                   <!-- <div class="col-md-5">
                     <ul class="list-unstyled address-container">
                       <li>
