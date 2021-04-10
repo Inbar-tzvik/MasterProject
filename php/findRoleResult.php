@@ -19,11 +19,11 @@ echo "Connection successful";
 $sql = "SELECT up.* ,r.management, r.software , r.workInATeam
 FROM UsersPreferences up
 LEFT JOIN roles r
-WHERE (software>= 0 AND software<=20 )
+WHERE (software>= 0 AND software<=2 )
 and
- ( management >=40 AND management<=70) 
+ ( management >=4 AND management<=7) 
 and
- (workInATeam BETWEEN '50' AND '80')";
+ (workInATeam BETWEEN '5' AND '8')";
 
 
 
