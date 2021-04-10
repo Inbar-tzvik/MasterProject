@@ -1,4 +1,3 @@
-
 <?php
 $server_name = "localhost";
 $username = "maycois";
@@ -13,18 +12,14 @@ if ($conn->connect_error) {
 }
 echo "Connection successful";
 
-
 $management = $_POST['management'];
-$design = $_POST[`design`];
-$software = $_POST[`software`];
-$workInATeam = $_POST[`workInATeam`];
-$umiDiagramOriented = $_POST[`umiDiagramOriented`];
-$teaching = $_POST[`teaching`];
-$analysisCapabilities = $_POST[`analysisCapabilities`];
-$sql = "INSERT INTO `UsersPreferences` (`management`, `design`,`software`, `workInATeam`.`umiDiagramOriented`, `teaching`, `analysisCapabilities`)  VALUES (" . $management . " , " . $design . " , " . $software . ", " . $workInATeam . ", " . $umiDiagramOriented . " , " . $teaching . ", " . $analysisCapabilities . ")";
-
-
-
+$design = $_POST['design'];
+$software = $_POST['software'];
+$workInATeam = $_POST['workInATeam'];
+$umlDiagramOriented = $_POST['umlDiagramOriented'];
+$teaching = $_POST['teaching'];
+$analysisCapabilities = $_POST['analysisCapabilities'];
+$sql = "INSERT INTO `UsersPreferences` (`management`, `design`,`software`, `workInATeam`,`umlDiagramOriented`, `teaching`, `analysisCapabilities`)  VALUES ('" . $management . "' , '" . $design . "' , '" . $software . "', '" . $workInATeam . "', '" . $umlDiagramOriented . "' , '" . $teaching . "', '" . $analysisCapabilities . "')";
 
 
 
