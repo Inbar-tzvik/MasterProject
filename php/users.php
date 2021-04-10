@@ -16,10 +16,13 @@ echo "Connection successful";
 
 
 
-$comment = $_POST[`comment`];
-$subject = $_POST[`subject`];
-$email = $_POST[`email`];
+$comment = $_POST['comment'];
+$subject = $_POST['subject'];
+$email = $_POST['email'];
 $sql = "INSERT INTO `user_information` (`comment`, `subject`,`email`)  VALUES ( '" . $comment . "','" . $subject . "','" . $email . "')";
+
+
+
 
 
 // $conn->query($sql);

@@ -1,7 +1,13 @@
 function myFunction() {
 
    
-  var  managementErr=designErr=softwareErr=workInATeamErr=umiDiagramOrientedErr=teachingErr=analysisCapabilitiesErr =true;
+  var  managementErr= true
+  var designErr= true
+  var softwareErr= true
+  var workInATeamErr= true 
+  var umlDiagramOrientedErr= true
+  var teachingErr= true 
+  var analysisCapabilitiesErr =true;
 
 
 
@@ -21,7 +27,7 @@ function myFunction() {
 
     
 
-    if((managementErr && designErr && softwareErr && workInATeamErr && umiDiagramOrientedErr && teachingErr&& analysisCapabilitiesErr ) === true) {
+    if((managementErr && designErr && softwareErr && workInATeamErr && umlDiagramOrientedErr && teachingErr&& analysisCapabilitiesErr ) === true) {
         
        
         alert('The form has been sent successfully');
