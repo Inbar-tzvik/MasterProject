@@ -13,16 +13,29 @@ if ($conn->connect_error) {
 }
 echo "Connection successful";
 
-$array = array();
-$sql ="SELECT SUM(sql_course)as sql_course,SUM(python)as python,SUM(html)as html,SUM(c) as c,SUM(php)as php,SUM(java) as java FROM roles1";
-$result = mysql_query( $sql, $conn );
-while($row = mysqli_fetch_array($result)){
-    $coursename= $row['Field'];
-    $count=$row['count'];
-    $array['cols'][] = array('type' => 'string'); 
-    $array['rows'][] = array('c' => array( array('v'=> $coursename), array('v'=>(int)$count)) );
 
+$sql = "SELECT *  FROM roles2";
+$result = mysqli_query($sql, $conn);
+$array = array();
+$i = 0;
+while ($row = mysqli_fetch_assoc($result)) {
+    $coursename = $row['course'];
+    $count = $row['number'];
+    $array['cols'][] = array('type' => 'string');
+    $array['rows'][] = array('c' => array(array('v' => $coursename), array('v' => (int)$count)));
 }
+
+
+// $array = array();
+// $sql ="SELECT SUM(sql_course)as sql_course,SUM(python)as python,SUM(html)as html,SUM(c) as c,SUM(php)as php,SUM(java) as java FROM roles1";
+// $result = mysql_query( $sql, $conn );
+// while($row = mysqli_fetch_array($result)){
+//     $coursename= $row['Field'];
+//     $count=$row['count'];
+//     $array['cols'][] = array('type' => 'string'); 
+//     $array['rows'][] = array('c' => array( array('v'=> $coursename), array('v'=>(int)$count)) );
+
+// }
 $data = json_encode($array);
 echo $data;
 
