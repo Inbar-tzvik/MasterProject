@@ -13,11 +13,18 @@ if ($conn->connect_error) {
 }
 echo "Connection successful";
 
+$array = array();
+$sql ="SELECT SUM(sql_course)as sql_course,SUM(python)as python,SUM(html)as html,SUM(c) as c,SUM(php)as php,SUM(java) as java FROM roles1";
+$result = mysql_query( $sql, $conn );
+while($row = mysqli_fetch_array($result)){
+    $coursename= $row['Field'];
+    $count=$row['count'];
+    $array['cols'][] = array('type' => 'string'); 
+    $array['rows'][] = array('c' => array( array('v'=> $coursename), array('v'=>(int)$count)) );
 
-$sql ="SELECT SUM(html), FROM roles1";
-$retval = mysql_query( $sql, $conn );
-
-
+}
+$data = json_encode($array);
+echo $data;
 
 // $conn->query($sql);
 if ($conn->query($sql) == FALSE) {
