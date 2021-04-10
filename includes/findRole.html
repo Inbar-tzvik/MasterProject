@@ -23,14 +23,16 @@
 
 <link href="../css/findRole.css" rel="stylesheet"> 
 
-<link href="../css/HomePage1.css" rel="stylesheet"></head>
+<link href="../css/HomePage1.css" rel="stylesheet">
+</head>
 
 
 
 <body> <!-- Add your content of header -->
 <header>
-  <div id="header"></div>
-    <!-- <nav class="navbar navbar-default active">
+   <div id="header"></div> 
+   
+     <!-- <nav class="navbar navbar-default active">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
@@ -59,18 +61,19 @@
         </ul>
       </div> 
     </div>
-  </nav> -->
+  </nav>  -->
 </header>
 
 <main id="color-ba">
 
-<div class="section-container">
-    <div class="container">
+    <h1 class="text-center">מציאת תפקיד</h1>
+    <p class="text-center"> אז איך זה עובד? <br> לפי ההשכלה והתחומי עניין שאתה מגדיר אתה תקבל הצעות לתפקידים שמתאימים במיוחד עבורך.</p>
+<!--           
+ <div class="section-container"></div>
+    <div class="container"> -->
       <div class="row">
         <div class="col-xs-12 col-md-8 col-md-offset-2">
-          <h1 class="text-center">מציאת תפקיד</h1>
-          <p class="text-center"> ?אז איך זה עובד <br> לפי ההשכלה והתחומי עניין שאתה מגדיר אתה תקבל הצעות לתפקידים שמתאימים במיוחד עבורך.</p>
-          
+         
           <!-- <div class="section-container-spacer">
             <img src="../images/img-06.jpg" alt="" class="img-responsive reveal-content" data-action="zoom">
           </div> -->
@@ -79,7 +82,7 @@
         </div>
 
          <div id="block1">
-        <form name="MyForm"   action="../php/findRole.php"                  onsubmit="return myFunction()" method="post">
+        <form name="MyForm"   action="../php/findRole.php"  onsubmit="return myFunction()" method="post">
 
             <!-- <section class="one"> -->
          
@@ -117,12 +120,12 @@
             </div>   -->
 
 
-                 <h3 dir="rtl"> אנחנו הגדירו עד כמה התחום עניין מתאים עבורכם</h3>
+                 <h3 dir="rtl">  הגדירו עד כמה התחום עניין מתאים עבורכם</h3>
                  <br>
 
-                 <section class="one">
+                <section class="one">
                 <label for="text">	אוריינטציה ניהולית </label>
-                <input  type="range" value="0" min="0" max="100" oninput="this.nextElementSibling.value = this.value" name="management" id="management">
+                <input  type="range" value="0" min="0" max="10" oninput="this.nextElementSibling.value = this.value" name="management" id="management">
                 <output>0</output>
                <div id="managementErr" class="error" ></div>
 
@@ -133,54 +136,82 @@
                
 
                  <label for="text">אוריינטציה עיצובית </label>
-                <input type="range" value="0" min="0" max="100" oninput="this.nextElementSibling.value = this.value">
+
+
+                <input type="range" value="0" min="0" max="10" oninput="this.nextElementSibling.value = this.value"  name="design" id="design">
+
                 <output>0</output>
+                <div id="designErr" class="error" ></div>
+
                 
         
 
                 <br>
  		 
                 <label for="text">אוריינטציה תכנותית </label>
-                <input type="range" value="0" min="0" max="100" oninput="this.nextElementSibling.value = this.value">
+
+
+                <input type="range" value="0" min="0" max="10" oninput="this.nextElementSibling.value = this.value" name="software" id="software">
+
                 <output>0</output>
+                <div id="softwareErr" class="error" ></div>
+
 
                 <br>
 
                  <label for="text">עבודה בצוות</label>
-                <input type="range" value="0" min="0" max="100" oninput="this.nextElementSibling.value = this.value">
+
+
+                <input type="range" value="0" min="0" max="10" oninput="this.nextElementSibling.value = this.value" name="workInATeam" id="workInATeam">
+
                 <output>0</output>
+                <div id="workInATeamErr" class="error" ></div>
+
 
                 <br>
                  
                  <label for="text">ניתוח ואפיון בעזרת תרשימים</label>
-                <input type="range" value="0" min="0" max="100" oninput="this.nextElementSibling.value = this.value">
+
+                <input type="range" value="0" min="0" max="10" oninput="this.nextElementSibling.value = this.value" name="umiDiagramOriented" id="umiDiagramOriented">
+
                 <output>0</output>
+                <div id="umiDiagramOrientedErr" class="error" ></div>
+
 
                 <br>
 
                  <label for="text">יכולות הדרכה</label>
-                <input type="range" value="0" min="0" max="100" oninput="this.nextElementSibling.value = this.value">
+                <input type="range" value="0" min="0" max="10" oninput="this.nextElementSibling.value = this.value" name="teaching" id="teaching">
                 <output>0</output>
+                <div id="teachingErr" class="error" ></div>
+
 
                 <br>
                  
                  <label for="text">יכולות ניתוח והסקה</label>
-                <input type="range" value="0" min="0" max="100" oninput="this.nextElementSibling.value = this.value">
+                <input type="range" value="0" min="0" max="10" oninput="this.nextElementSibling.value = this.value">
                 <output>0</output>
-                  
+                <div id="analysisCapabilitiesErr" class="error" ></div>
 
-                <!-- <div class="textrow " >
-                <input type="text" name="FirstName"  id="first_name"  required >
-                </div>
-                <div id="FNameErr" class="error" ></div> -->
+                
+               
                    <br>
+  
 
-                <div class="textrow">
+                    <!-- מעבר לדף של התוצאה של התפקיד -->
+                    
+                  
+      
+                 <div class="textrow">
                     <input type="submit" value="מצא לי תפקיד">
                 </div>
-              </section>
+              </section> 
             <!-- </section> -->
 
+
+
+
+      
 
             <div id="statusMessage"> 
               <?php

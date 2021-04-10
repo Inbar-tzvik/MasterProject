@@ -1,7 +1,8 @@
+
 <?php
 $server_name = "localhost";
-$username = "UserPro"; //check
-$password = "l!m@i#123lmi!@#";
+$username = "maycois";
+$password = "WwSVtsJ1pMl6";
 $database = "maycois_MasterProject";
 
 
@@ -12,22 +13,17 @@ if ($conn->connect_error) {
 }
 echo "Connection successful";
 
-// $firstname = $_POST['FirstName'];
-// $lastname = $_POST['LastName'];
-// $email = $_POST['email'];
-// $phone = $_POST['PhoneNumber'];
-// $numofpar = $_POST['numberofpar'];
-// $privateroom = $_POST['Privateclass'];
-// $kosher = $_POST['Kosher'];
-// $date = $_POST['date'];
-// $workshoptype = $_POST['WorkshopType'];
-// $comments = $_POST['comments'];
-
-// $sql = "INSERT INTO `workshopres` (`firstname`,`lastname`,`email`,`phone`,`numofpar`,`privateroom`,`kosher`,`date`,`workshoptype`,`comments`) VALUES ('" . $firstname . "','" . $lastname . "','" . $email . "','" . $phone . "'," . $numofpar . ",'" . $privateroom . "','" . $kosher . "','" . $date . "','" . $workshoptype . "','" . $comments . "')";
 
 $management = $_POST['management'];
+$design = $_POST[`design`];
+$software = $_POST[`software`];
+$workInATeam = $_POST[`workInATeam`];
+$umiDiagramOriented = $_POST[`umiDiagramOriented`];
+$teaching = $_POST[`teaching`];
+$analysisCapabilities = $_POST[`analysisCapabilities`];
+$sql = "INSERT INTO `UsersPreferences` (`management`, `design`,`software`, `workInATeam`.`umiDiagramOriented`, `teaching`, `analysisCapabilities`)  VALUES (" . $management . " , " . $design . " , " . $software . ", " . $workInATeam . ", " . $umiDiagramOriented . " , " . $teaching . ", " . $analysisCapabilities . ")";
 
-$sql = "INSERT INTO `UsersPreferences` (`management`)  VALUES (" . $management . ")";
+
 
 
 

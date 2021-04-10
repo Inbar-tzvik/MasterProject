@@ -22,13 +22,15 @@
 
   <title> דף הבית</title>
 
-<link href="./css/HomePage1.css" rel="stylesheet" type="text/css"></head>
+<link href="./css/HomePage1.css" rel="stylesheet" type="text/css">
+</head>
 
 <!-- <link rel="stylesheet" type="text/css" href="./css/HomePage.css"/> -->
 
 
 <body> <!-- Add your content of header -->
 <header>
+  
   <nav class="navbar navbar-default active">
     <div class="container">
       <div class="navbar-header">
@@ -174,7 +176,7 @@
       <div class="row section-container-spacer">
         <div class="col-xs-12 col-md-12">
           <h2 class="text-center">מצב השוק</h2>
-          <p>המפה שלפניכם מראה את ביקוש הושק לפי תחומי ידע <br>Vestibulum sit amet hendrerit leo, quis vehicula mi.</p>
+          <p>המפה שלפניכם מראה את ביקוש השוק לפי תחומי ידע </p>
           <div id="piechart"></div>
 
         </div>  
@@ -206,8 +208,8 @@
         </div>  
       </div>
       <div class="row">
-        <div class="col-xs-12 col-md-4 ">
-          <img src="../images/may.jpeg" alt="" class="reveal img-responsive reveal-content image-center st_img ">
+        <div class="col-xs-12 col-md-4">
+          <img src="../images/may.jpeg"  alt="" class="reveal img-responsive reveal-content image-center st_img ">
           <h3> מאי כהן</h3>
           <h4>UX designer</h4>
           <p>Sed elementum vehicula nisl, a egestas velit rhoncus nec.Cras vel sapien tincidunt, lacinia risus vel, imperdiet neque.</p>
@@ -273,20 +275,39 @@
           </div>
           <div  dir="rtl" class="card-container">
             <div class="card card-shadow col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 reveal">
-              <form  action="" class="reveal-content">
+
+              <form  class="reveal-content" action="../php/users.php"  onsubmit="return myFunction()" method="post"> 
+
                 <div class="row">
                   <div class="col-md-7">
                     <div class="form-group">
-                      <input  type="email" class="form-control" id="email" placeholder="מייל">
+                      <input  type="email" class="form-control" id="email" placeholder="מייל" name="email" >
                     </div>
+                    <div id="emailErr" class="error" ></div>
+
                     <div class="form-group">
-                      <input type="text" class="form-control" id="subject" placeholder="נושא">
+                      <input type="text" class="form-control" id="subject" placeholder="נושא" name="subject">
                     </div>
+                    <div id="subjectErr" class="error" ></div>
+
                     <div class="form-group">
-                      <textarea class="form-control" rows="3" placeholder="רשום תגובה"></textarea>
+                      <textarea class="form-control" rows="3" placeholder="רשום תגובה" id= "comment" name="comment"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">שלח משוב</button>
+                    <div id="commentErr" class="error" ></div>
+
+                    <button type="submit" class="btn btn-primary"   name="submit"  >שלח משוב</button>
+
                   </div>
+                  
+                  <div id="statusMessage"> 
+                    <?php
+                    if (! empty($message)) {
+                        ?>
+                        <p> <?php echo $message; ?></p>
+                    <?php
+                    }
+                    ?>
+                </div>
                   <!-- <div class="col-md-5">
                     <ul class="list-unstyled address-container">
                       <li>
@@ -306,7 +327,7 @@
                 </div>
               </form>
             </div>
-            <div class="card-image col-xs-12" style="background-image: url('../images/compass.png')">
+            <!-- <div class="card-image col-xs-12" style="background-image: url('../images/compass.png')" -->
             </div>
           </div>
         </div>  
@@ -330,7 +351,7 @@
 
         <div class="row">
           <div class="col-xs-12 col-sm-7">
-            <!-- <p><small>Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></small>
+             <p><small>Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></small>
             </p> -->
           </div>
           <div class="col-xs-12 col-sm-5">
@@ -352,7 +373,7 @@
       </div>
     </div>
   </div>
-</footer> -->
+</footer> 
 
 <script>
   document.addEventListener("DOMContentLoaded", function (event) {
