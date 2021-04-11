@@ -20,10 +20,60 @@ function myFunction() {
     }
 
 
-    // אולי זה בדיקה למשתמש
+    //design
+    var numbers = /^[+]?[1-10]+$/;
+    if(!design.value.match(numbers)){
+         text = "נראה שיש תחום עניין שעדיין 0 , רק בודקים שלא שכחת";
+     document.getElementById("designErr").innerHTML = text;
+     designErr= false;
+    }
+
+//software
+    var numbers = /^[+]?[1-10]+$/;
+    if(!software.value.match(numbers)){
+         text = "נראה שיש תחום עניין שעדיין 0 , רק בודקים שלא שכחת";
+     document.getElementById("softwareErr").innerHTML = text;
+     softwareErr= false;
+    }
+
+
+    //workInATeam
+    var numbers = /^[+]?[1-10]+$/;
+    if(!workInATeam.value.match(numbers)){
+         text = "נראה שיש תחום עניין שעדיין 0 , רק בודקים שלא שכחת";
+     document.getElementById("workInATeamErr").innerHTML = text;
+     workInATeamErr= false;
+    }
+
+
+  //umlDiagramOriented
+  var numbers = /^[+]?[1-10]+$/;
+  if(!umlDiagramOriented.value.match(numbers)){
+       text = "נראה שיש תחום עניין שעדיין 0 , רק בודקים שלא שכחת";
+   document.getElementById("umlDiagramOrientedErr").innerHTML = text;
+   umlDiagramOrientedErr= false;
+  }
+
+//teaching
+  var numbers = /^[+]?[1-10]+$/;
+  if(!teaching.value.match(numbers)){
+       text = "נראה שיש תחום עניין שעדיין 0 , רק בודקים שלא שכחת";
+   document.getElementById("teachingErr").innerHTML = text;
+   teachingErr= false;
+  }
+
+
+  //analysisCapabilities
+  var numbers = /^[+]?[1-10]+$/;
+  if(!analysisCapabilities.value.match(numbers)){
+       text = "נראה שיש תחום עניין שעדיין 0 , רק בודקים שלא שכחת";
+   document.getElementById("analysisCapabilitiesErr").innerHTML = text;
+   analysisCapabilitiesErr= false;
+  }
 
 
 
+    
 
     
 
