@@ -25,7 +25,6 @@ while ($row = mysqli_fetch_assoc($result)) {
     $array['rows'][] = array('c' => array(array('v' => $coursename), array('v' => (int)$count)));
 }
 
-
 // $array = array();
 // $sql ="SELECT SUM(sql_course)as sql_course,SUM(python)as python,SUM(html)as html,SUM(c) as c,SUM(php)as php,SUM(java) as java FROM roles1";
 // $result = mysql_query( $sql, $conn );
@@ -36,6 +35,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 //     $array['rows'][] = array('c' => array( array('v'=> $coursename), array('v'=>(int)$count)) );
 
 // }
+
 $data = json_encode($array);
 echo $data;
 
