@@ -25,16 +25,23 @@ echo "Connection successful";
 // and
 //  (workInATeam BETWEEN '5' AND '8')";
 
-$sql = "SELECT up.* ,r.management, r.software , r.workInATeam
+// $sql = "SELECT up.* ,r.management, r.software , r.workInATeam
+// FROM UsersPreferences up
+// LEFT JOIN roles r
+// WHERE (up.software = r.software )
+// and
+//  ( up.management = r.management) 
+// and
+//  (up.workInATeam = r.workInATeam)";
+
+$sql = "SELECT r.name
 FROM UsersPreferences up
-LEFT JOIN roles r
+INNER JOIN roles r
 WHERE (up.software = r.software )
 and
  ( up.management = r.management) 
 and
  (up.workInATeam = r.workInATeam)";
-
-
 
 
 
