@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+
+  </head>
+
+<body>
+
+
+</body>
+
+
+
+
+
+
+
+
+<!-- firebase -->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+
+
+
+
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<!-- <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script> -->
+
+
+
+
+
+
+
+<h1> בדיקה</h1>
+
+<!-- <form>
+
+  <div class="row">
+    <div class="col-md-7">
+      <div class="form-group">
+        <input  type="email" class="form-control" id="email" placeholder="מייל" name="email" >
+      </div>
+      <div id="emailErr" class="error" ></div>
+      <button  id="btn-login" type="submit" class="btn btn-primary"  name="submit"  >שלח משוב</button>
+
+
+
+</form> -->
+
+<h1 id="id1">id 1 </h1>
+<input type="textfield" id="id2">
+<button id="saveButton"> save</button>
+
+
+
+
+
+<!-- firebase  -->
+<script defer src="../js/index.js"></script>
+<script>
+  firebase.auth().onAuthStateChanged(function(user)
+  {
+    if (user)
+    {
+      window.location.herf = "findRole.html"; 
+    }
+  });
+
+
+</script>
+
+
+
+</html>
