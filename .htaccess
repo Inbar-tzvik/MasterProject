@@ -1,0 +1,3 @@
+AddHandler application/x-httpd-ea-php55 .html
+
+
