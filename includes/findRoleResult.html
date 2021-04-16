@@ -34,12 +34,29 @@
 </header>
 
 <main id="color-ba">
+  <form  name="MyForm"  action="../php/findRoleResult.php" >
+        
 
-            <h2>       פה יוצגו התוצאה מהשרת </h2>
+    <h2>       פה יוצגו התוצאה מהשרת </h2>
+
+   <div id="statusMessage"> 
+    <?php
+    if (! empty($message)) {
+    ?>
+    <p> <?php echo $message; ?></p>
+<?php
+}
+?>
+
+            <?php eco $colum["name"];
+            ?>
 
 
+</div>
 
-        </div>
+</div>
+
+</form>
 
 
 
