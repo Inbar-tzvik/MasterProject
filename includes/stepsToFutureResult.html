@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-icon-180x180.png">
+  <link href="./assets/favicon.ico" rel="icon"> -->
+
+  <link href="" rel="stylesheet">
+
+
+  <title>צעדים  </title>
+
+<link href="../css/stepsToFuture.css" rel="stylesheet"> 
+
+<link href="../css/HomePage1.css" rel="stylesheet"></head>
+
+
+<body>
+
+    <header>   
+  <div id="header"></div>
+
+    </header>
+    
+
+<main id="color-ba">
+
+    
+<h1 class="text-center" >צעדים לתפקיד הנחשק</h1>
+<p class="text-center"> אז איך זה עובד? <br> על ידי בחירת תפקיד ובחירת הקורסים שלמדת והזנת הציונים אנו נציג לך את הצעדים הדרושים לקבלת התפקיד  </p>
+
+<form  name="MyForm"  action="../php/stepsToFutureResult.php" >
+
+<h3 > פה יוצגו תוצאות מהשרת </h3>
+
+<div class="testbox">
+   
+
+    <div id="statusMessage"> 
+        <?php
+        if (! empty($message)) {
+        ?>
+        <p> <?php echo $message; ?></p>
+    <?php
+    }
+    ?>
+
+    </div>
+
+
+</div>
+
+</form>
+
+
+    </main>
+
+
+
+      <footer>
+        <div id="footer"></div>
+        </footer> 
+    
+
+
+
+      
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="   crossorigin="anonymous"    ></script>   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<script defer src="../js/headerfooter.js"></script>
+<script type="text/javascript" src="./js/main.0cf8b554.js"></script></body>
+
+
+</html>
