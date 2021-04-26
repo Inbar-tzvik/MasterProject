@@ -1,11 +1,12 @@
 <?php
+
 $server_name = "localhost";
 $username = "maycois";
 $password = "WwSVtsJ1pMl6";
 $database = "maycois_MasterProject";
 
-
 $conn = new mysqli($server_name, $username, $password, $database);
+$conn->set_charset('utf8');
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -21,8 +22,6 @@ $analysisCapabilities = $_POST['analysisCapabilities'];
 $sql = "INSERT INTO `UsersPreferences` (`management`, `design`,`software`, `workInATeam`,`umlDiagramOriented`, `teaching`, `analysisCapabilities`)  VALUES ('" . $management . "' , '" . $design . "' , '" . $software . "', '" . $workInATeam . "', '" . $umlDiagramOriented . "' , '" . $teaching . "', '" . $analysisCapabilities . "')";
 
 
-
-
 // $conn->query($sql);
 if ($conn->query($sql) == FALSE) {
     echo "Can not add new reservation. Error is: " .
@@ -32,51 +31,116 @@ if ($conn->query($sql) == FALSE) {
 
 ?>
 <!DOCTYPE html>
+<html>
 
 <head>
     <title>PHP Print</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <meta charset="utf-8">
+
+    <link href="../css/findRole.css" rel="stylesheet">
+
+    <link href="../css/HomePage1.css" rel="stylesheet">
 </head>
+
+<header>
+    <div id="header"></div>
+
+</header>
 
 <body>
 
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>User Data</h2>
-                <table class="table table-bordered print">
-                    <thead>
-                        <tr>
-                            <th>S.No</th>
-                            <th>name</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $sn = 1;
-                        $user_qry = "SELECT * from roles";
-                        $user_res = mysqli_query($conn, $user_qry);
-                        while ($user_data = mysqli_fetch_assoc($user_res)) {
-                        ?>
-                            <tr>
-                                <td><?php echo $sn; ?></td>
-                                <td><?php echo $user_data['name']; ?></td>
-                            </tr>
-                        <?php
-                            $sn++;
-                        }
-                        ?>
-                    </tbody>
-                </table>
 
-                <div class="text-center">
-                    <a href="user_data_print.php" class="btn btn-primary">Print</a>
-                </div>
+
+                <?php
+
+                $user_qry = "SELECT name,description from roles where ($software=roles.software or $software=roles.software+1 or $software=roles.software-1) and ($management=roles.management or $management=roles.management+1 or $management=roles.management-1)and ($design=roles.design or $design=roles.design+1 or $design=roles.design-1)and ($workInATeam=roles.workInATeam or $workInATeam=roles.workInATeam+1 or $workInATeam=roles.workInATeam-1)and ($umlDiagramOriented=roles.umlDiagramOriented or $umlDiagramOriented=roles.umlDiagramOriented+1 or $umlDiagramOriented=roles.umlDiagramOriented-1)and ($teaching=roles.teaching or $teaching=roles.teaching+1 or $teaching=roles.teaching-1)and ($analysisCapabilities=roles.analysisCapabilities or $analysisCapabilities=roles.analysisCapabilities+1 or $analysisCapabilities=roles.analysisCapabilities-1)";
+
+
+                $user_res1 = mysqli_query($conn, $user_qry);
+                $user_res2 = mysqli_query($conn, $user_qry);
+
+
+                if (empty(mysqli_fetch_assoc($user_res1))) {
+                ?>
+                    <h1 class="text-center">מציאת תפקיד</h1 <br>
+                    <p class="text-center"> לא נמצא תפקיד מתאים <br> לפי לפי התחומים שהבחרתי לא נמתא תפקיד שתואם למאגר , אנא בחר שוב .</p>
+                    <br>
+                    <br>
+
+                    <br>
+
+
+
+
+                    <?php
+                } else {
+                    echo  " <h1 class='text-center'>מציאת תפקיד</h1>";
+                    echo    "<p class='text-center'>  לאחר שבחרת את תחומי העניין המתאימים עבורך <br>  התוצאה מוצגת לך בדף זה    .</p>";
+
+
+
+
+
+                    while ($user_data = mysqli_fetch_assoc($user_res2)) {
+
+                        echo   "<table dir='rtl' class='table table-bordered print'>";
+                        echo    "<thead>";
+                        echo            "<tr>";
+                        //   echo           "<th>Name</th>"; 
+                    ?>
+                        <p class='text-center' style='color:blue;font-weight:bold;font-size:30px'>
+                            התפקיד שנבחר הוא:<br><br>
+                            <?php echo           $user_data['name']; ?></p>
+                        <?php
+                        //  echo           "<th>Description</th>";
+
+                        echo       "</tr>";
+                        echo    "</thead>";
+                        echo    "<tbody>";
+
+
+                        ?>
+
+                        <br>
+                        <tr>
+                            <!--   <td><//?php echo $user_data['name']; ?></td> -->
+                            <td style='font-weight:bold;font-size:20px'><?php echo 'תיאור התפקיד ' ?></td>
+                            <td class='text-center' style='color:black'><?php echo $user_data['description']; ?></td>
+
+                        </tr>
+
             </div>
+    <?php
+                    }
+                }
+    ?>
+    </tbody>
+
+    </table>
+
+    <div class="text-center">
+        <a href="user_data_print.php" class="btn btn-primary">Print</a>
+    </div>
         </div>
     </div>
+    </div>
 </body>
+
+<footer>
+    <div id="footer"></div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<script defer src="../js/headerfooter.js"></script>
 
 </html>
