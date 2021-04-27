@@ -30,6 +30,7 @@ if ($conn->query($sql) == FALSE) {
 }
 
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -73,6 +74,8 @@ if ($conn->query($sql) == FALSE) {
                     <p class="text-center"> לא נמצא תפקיד מתאים <br> לפי לפי התחומים שהבחרתי לא נמתא תפקיד שתואם למאגר , אנא בחר שוב .</p>
                     <br>
                     <br>
+                    <img src="../images/search.jpg" alt="" class="reveal img-responsive reveal-content image-center st_img bigger">
+
 
                     <br>
 

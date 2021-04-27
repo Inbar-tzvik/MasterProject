@@ -63,6 +63,25 @@
   <form name="MyForm"  action="../php/stepsToFuture.php"  onsubmit="return myFunction()" method="post">
    
 
+    
+    <h4>בחירת תפקיד</h4>
+    <select id="role">
+      <option> אנא בחר תפקיד מהרשימה</option>
+      <option>product manager </option>
+      <option>backend developer</option>
+      <option>מיישם ERP</option>
+      <option>מפתח WEB</option>
+      <option>UI/UX</option>
+      <option>Business analyst</option>
+      <option>מפתח BI</option> 
+      <option>Application analyst</option> 
+      <option>איש/אשת אבטחת מידע</option>
+      <option>תמיכה טכנית</option> 
+      <option>מנתח מערכות מידע</option>
+
+    </select>
+    <div id="roleErr" class="error" ></div>
+
 
     <h4>מסדי נתונים (SQL)</h4>
     <select id="SQL">
@@ -235,8 +254,9 @@
 
 
   <div class="btn-block">
-    <button type="submit" formaction="../includes/stepsToFutureResult.html">שלח </button>
-  </div>
+
+    <button type="submit"  name="submit" > שלח
+    </button>   </div>
 
    </form>
     
