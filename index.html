@@ -42,6 +42,66 @@ $result = mysqli_query($conn,$sql);
   <title> דף הבית</title>
 
 <link href="./css/HomePage1.css" rel="stylesheet" type="text/css">
+
+<style>
+/* Popup container - can be anything you want */
+.popup.sticky {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show.sticky {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>
+
 </head>
 
 
@@ -124,7 +184,7 @@ $result = mysqli_query($conn,$sql);
           <img src="../images/may.jpeg" alt="" class="reveal img-responsive reveal-content image-center st_img ">
           <h3> מאי כהן</h3>
           <h4>UX designer</h4>
-          <p>Sed elementum vehicula nisl, a egestas velit rhoncus nec.Cras vel sapien tincidunt, lacinia risus vel, imperdiet neque.</p>
+          <p>מניעה את כולם לפעולה</p>
           <p>
             <a href="https://facebook.com/" class="social-round-icon fa-icon" title="">
               <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -142,7 +202,7 @@ $result = mysqli_query($conn,$sql);
           <img src="../images/liat.jpeg" alt="" class="reveal img-responsive reveal-content image-center st_img bigger">
           <h3>ליאת רוכמן</h3>
           <h4>UI designer</h4>
-          <p>Praesent at feugiat est, at faucibus ipsum. Aenean condimentum mauris vel malesuadav pulvinar. Vestibulum sit amet hendrerit leo, quis vehicula mi.</p>
+          <p>השעות הכי טובות שלי הן בלילה</p>
           <p>
             <a href="https://facebook.com/" class="social-round-icon fa-icon" title="">
               <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -159,7 +219,7 @@ $result = mysqli_query($conn,$sql);
           <img src="../images/inbar.png" alt="" class="reveal img-responsive reveal-content image-center st_img bigger">
           <h3>ענבר צביק</h3>
           <h4>Developer</h4>
-          <p>Busce rutrum nisi non dui placerat sodales. Vivamus feugiat rutrum malesuada. Nulla volutpat sapien ac gravida varius</p>
+          <p>לאט זה בטוח</p>
           <p>
             <a href="https://facebook.com/" class="social-round-icon fa-icon" title="">
               <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -186,11 +246,13 @@ $result = mysqli_query($conn,$sql);
             <h2 class="text-center">נשמח לשמוע מכם איך נוכל להשתפר</h2>
             <p class="text-center"> :) תודה על המענה</p>
           </div>
+       
           <div  dir="rtl" class="card-container">
             <div class="card card-shadow col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 reveal">
 
-              <form  class="reveal-content" action="../php/users.php"  onsubmit="return myFunction()" method="post"> 
-
+              <form  class="reveal-content" action="../php/users.php" 
+              onSubmit="alert('תודה על המענה');" method="post"> 
+ <!--<form  class="reveal-content" action="../php/users.php"  onsubmit="return myFunction()" method="post"> -->
                 <div class="row">
                   <div class="col-md-7">
                     <div class="form-group">
@@ -208,7 +270,24 @@ $result = mysqli_query($conn,$sql);
                     </div>
                     <div id="commentErr" class="error" ></div>
 
-                    <button type="submit" class="btn btn-primary"  name="submit"  >שלח משוב</button>
+                  <button type="submit" class="btn btn-primary"  name="submit" >שלח משוב</button>
+               <!--   <div class="popup" onclick="myFunction1()" >
+                      שלח משוב 
+                 <span class="popuptext" id="myPopup">תגובתך נשלחה</span>
+                    </div>  -->
+                    
+                     <!-- <button type="submit" name="sumbit" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">שלח</button>-->
+
+       <!-- <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+       <div class="modal-dialog modal-sm">
+       <div class="modal-content">
+      !תודה על תגובתך    </div>
+  </div> 
+</div>-->
+                    
+                    
+                    
+                    
 
                   </div>
                   
@@ -232,6 +311,15 @@ $result = mysqli_query($conn,$sql);
       </div>
     </div>
   </div>
+  
+  
+ <!-- <script>
+// When the user clicks on div, open the popup
+//function myFunction1() {
+ // var popup = document.getElementById("myPopup");
+ // popup.classList.toggle("show");
+//}
+//</script>-->
 
 <script>
   document.addEventListener("DOMContentLoaded", function (event) {

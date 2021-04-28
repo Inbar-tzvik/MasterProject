@@ -11,19 +11,16 @@ $conn = new mysqli($server_name, $username, $password, $database);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "Connection successful";
-
-
-
+//echo "Connection successful";
 
 $comment = $_POST['comment'];
 $subject = $_POST['subject'];
 $email = $_POST['email'];
 $sql = "INSERT INTO `user_information` (`comment`, `subject`,`email`)  VALUES ( '" . $comment . "','" . $subject . "','" . $email . "')";
 
-
-
-
+//  To redirect form on a particular page
+header("Location:../index.html?status=success");
+ 
 
 // $conn->query($sql);
 if ($conn->query($sql) == FALSE) {
