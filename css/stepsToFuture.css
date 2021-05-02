@@ -218,3 +218,7 @@ button:hover {
     word-break: keep-all;
   }
 }
+
+img {
+  border-radius: 50%;
+}

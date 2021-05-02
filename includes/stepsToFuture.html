@@ -11,11 +11,6 @@
 
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
-  
-  
-  <!-- <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-icon-180x180.png">
-  <link href="./assets/favicon.ico" rel="icon"> -->
-
   <link href="" rel="stylesheet">
 
 
@@ -36,70 +31,75 @@
 
 <main id="color-ba">
 
-    <!-- <div class="section-container">
-        <div  class="container">
-          <div  class="row">
-            <div class="col-xs-12 col-md-8 col-md-offset-2">
+
               <h1 class="text-center" >צעדים לתפקיד הנחשק</h1>
+     
+              <div class="section-container-spacer">
+                <img src="../images/img-06.jpg" alt="" class="img-responsive reveal-content" data-action="zoom" style=" border-radius: 50%; width:600px;  display: block;  margin-left: auto;
+  margin-right: auto;">
+              </div> 
+                            
               <p class="text-center"> ?אז איך זה עובד <br> על ידי בחירת תפקיד ובחירת הקורסים שלמדת והזנת הציונים אנו נציג לך את הצעדים הדרושים לקבלת התפקיד  </p>
               
-              <div class="section-container-spacer">
-                <img src="../images/img-06.jpg" alt="" class="img-responsive reveal-content" data-action="zoom">
-              </div> 
-                   
               <div id="color-ba"  class="config-panel">
             </div>
     
+
           
-        </div>
-      </div>
-    </div>
-</div> -->
-<h1 class="text-center" >צעדים לתפקיד הנחשק</h1>
-<p class="text-center"> אז איך זה עובד? <br> על ידי בחירת תפקיד ובחירת הקורסים שלמדת והזנת הציונים אנו נציג לך את הצעדים הדרושים לקבלת התפקיד  </p>
 
-
-<div class="testbox">
+<div class="testbox" >
   <form name="MyForm"  action="../php/stepsToFuture.php"  onsubmit="return myFunction()" method="post">
    
-
     
-    <h4>בחירת תפקיד</h4>
-    <select id="role">
-      <option> אנא בחר תפקיד מהרשימה</option>
-      <option>product manager </option>
-      <option>backend developer</option>
-      <option>מיישם ERP</option>
-      <option>מפתח WEB</option>
-      <option>UI/UX</option>
-      <option>Business analyst</option>
-      <option>מפתח BI</option> 
-      <option>Application analyst</option> 
-      <option>איש/אשת אבטחת מידע</option>
-      <option>תמיכה טכנית</option> 
-      <option>מנתח מערכות מידע</option>
+    <h4> לפנייך מוצגת רשימה של תפקידים</h4>
+    <select name="name_role" id="name_role">
+      <option>אנא בחר תפקיד מהרשימה </option>
+      <option value= "product_manager"> product manager </option>
+      <option value="backend_developer"> backend developer</option>
+      <option value= "erp">מיישם ERP</option>
+      <option value= "webDeveloper"> web developer</option>
+      <option value="UI/UX">UI/UX</option>
+      <option value="business_analyst">Business analyst</option>
+      <option value="BI_developer"> מפתח BI</option> 
+      <option value="analyst">Application analyst</option> 
+      <option value=" Security_information">איש/אשת אבטחת מידע</option>
+      <option value="tech">תמיכה טכנית</option> 
+      <option value="analyst_security">מנתח מערכות מידע</option>
 
     </select>
     <div id="roleErr" class="error" ></div>
 
 
-    <h4>מסדי נתונים (SQL)</h4>
-    <select id="SQL">
-      <option>60-65 </option>
-      <option>66-70 </option>
-      <option>71-75</option>
-      <option>76-80</option>
-      <option>81-85</option>
-      <option>86-90</option>
-      <option>91-95</option>
-      <option>96-100</option> 
-      <option>לא נלמד</option> 
+  <!--  <h4>מסדי נתונים (SQL)</h4>
+     <p id= "sql_course"> <label ><input class="txt" type="int" ></label></p>
 
-    </select>
+    <div id="SQLErr" class="error" ></div> -->
+    
+     <h5>  אם לא למדת קורס אנא השאר את הציון 0</h5>
+
+
+   <h4 for="text">מסדי נתונים (SQL)</h4>
+    <div class="textrow " >
+    <input type="text" name="sql_course"  id="sql_course"  value="0" >
+    </div>
+    
     <div id="SQLErr" class="error" ></div>
+       
+    <h4 for="text">תוכנת C</h4>
+    <div class="textrow " >
+    <input type="text" name="C_course"  id="C_course"   value="0" >
+    </div>
+    <div id="CErr" class="error" ></div>
+
+     <h4 for="text">HTML </h4>
+    <div class="textrow " >
+    <input type="text" name="HTML"  id="HTML"   value="0" >
+    </div>
+    <div id="HTMLErr" class="error" ></div>
 
 
-    <h4>תוכנת C </h4>
+
+  <!--  <h4>תוכנת C </h4>
     <select id ="C">
       <option>60-65 </option>
       <option>66-70 </option>
@@ -147,7 +147,7 @@
     <div id="PYTHONErr" class="error" ></div>
 
       
-    <!-- <h4>ניהול פרויקטים</h4>
+    <h4>ניהול פרויקטים</h4>
     <select>
       <option>60-65 </option>
       <option>66-70 </option>
@@ -157,7 +157,7 @@
       <option>86-90</option>
       <option>91-95</option>
       <option>96-100</option> 
-    </select> -->
+    </select> 
 
     <h4>SAP ERP </h4>
     <select id="SAP_ERP">
@@ -191,7 +191,7 @@
     </select>
     <div id="java_scriptErr" class="error" ></div>
 
-      <!-- אני חושבת שזאת עמודה מיותרת, מי לומד קורס PHP?  -->
+    
     <h4>PHP</h4>
     <select>
       <option>60-65 </option>
@@ -250,13 +250,13 @@
       <option>96-100</option>
       <option>לא נלמד</option> 
  
-    </select>
+    </select>-->
 
 
   <div class="btn-block">
-
-    <button type="submit"  name="submit" > שלח
-    </button>   </div>
+     <button type="submit"  name="submit" > שלח
+    </button>   
+  </div>
 
    </form>
     
