@@ -20,7 +20,7 @@ $sql = "INSERT INTO `user_information` (`comment`, `subject`,`email`)  VALUES ( 
 
 //  To redirect form on a particular page
 header("Location:../index.html?status=success");
- 
+
 
 // $conn->query($sql);
 if ($conn->query($sql) == FALSE) {
