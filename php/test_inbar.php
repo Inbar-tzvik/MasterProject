@@ -67,11 +67,20 @@ if ($conn->query($sql) == FALSE) {
 
                 <?php
 
-                $java = False;// הדיפולט הוא שלילי כלומר שהם לא עומדים בתנאי הקורס הזה 
+                $sql_course = False;// הדיפולט הוא שלילי כלומר שהם לא עומדים בתנאי הקורס הזה 
                 $html = False;
                 
+                  // שאילתא עובדת על כמה קורסים במקביל
+                //    $user_qry1 = "SELECT name_role,name_course,grade from Courses_roles where '".$name_role."'=Courses_roles.name_role AND ('".$sql_course."' and '".$HTML."' and '".$C_course."' =Courses_roles.grade)  GROUP BY name_role ";
 
-                $user_qry1 = "SELECT name_role,name_course,grade from Courses_roles where '" . $name_role . "'=Courses_roles.name_role and '" . $sql_course . "'=75 ";
+                
+                  //  $user_qry1 = "SELECT name_role,name_course,grade from Courses_roles where '".$name_role."'=Courses_roles.name_role AND 
+                  //  '".$sql_course."' < Courses_roles.grade OR 
+                  //  '".$HTML."' < Courses_roles.grade    ";
+
+
+                $user_qry1 = "SELECT name_role,name_course,grade if(
+                from Courses_roles where '" . $name_role . "'=Courses_roles.name_role ";
 
                 //$user_qry1 = "SELECT name_role,name_course,grade from Courses_roles where '".$name_role."'=Courses_roles.name_role and '".$sql_course."'= (SELECT name_course, grade from Courses_roles where grade =75 ";
 
@@ -80,6 +89,12 @@ if ($conn->query($sql) == FALSE) {
 
 
                 if (empty(mysqli_fetch_assoc($user_res3))) {
+
+                    while($row=mysqli_fetch_array($result)){
+                        if('".$row['name_coourse']."'=='sql_course' || $sql_course >='".$row['grade']."'){
+                            $sql_course = True;
+                        }
+                        echo"['".$row['course']."',".$row['number']."],";
                 ?>
                     <h1 class="text-center">צעדים לתפקיד הנחשק</h1 <br>
                     <p class="text-center"> בדף זה מוצגים לך הפערים בין הקורסים שלמדת לבין דרישות התפקיד שבחרת <br> הנתונים שמוצגים לך הם על סמך ביקוש השוק .</p>
