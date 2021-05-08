@@ -79,7 +79,7 @@ if ($conn->query($sql) == FALSE) {
                   //  '".$HTML."' < Courses_roles.grade    ";
 
 
-                $user_qry1 = "SELECT name_role,name_course,grade if(
+                $user_qry1 = "SELECT name_role,name_course,grade
                 from Courses_roles where '" . $name_role . "'=Courses_roles.name_role ";
 
                 //$user_qry1 = "SELECT name_role,name_course,grade from Courses_roles where '".$name_role."'=Courses_roles.name_role and '".$sql_course."'= (SELECT name_course, grade from Courses_roles where grade =75 ";
@@ -90,8 +90,8 @@ if ($conn->query($sql) == FALSE) {
 
                 if (empty(mysqli_fetch_assoc($user_res3))) {
 
-                    while($row=mysqli_fetch_array($result)){
-                        if('".$row['name_coourse']."'=='sql_course' || $sql_course >='".$row['grade']."'){
+                    while($row=mysqli_fetch_array($user_qry1)){
+                        if('".$row['name_course']."'=='sql_course' || $sql_course >='".$row['grade']."'){
                             $sql_course = True;
                         }
                         echo"['".$row['course']."',".$row['number']."],";
