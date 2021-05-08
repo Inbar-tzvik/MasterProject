@@ -63,20 +63,18 @@ if ($conn->query($sql) == FALSE) {
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-
-
                 <?php
 
-                $java = False;// הדיפולט הוא שלילי כלומר שהם לא עומדים בתנאי הקורס הזה 
-                $html = False;
-                
+                $bolsql_course = false; // הדיפולט הוא שלילי כלומר שהם לא עומדים בתנאי הקורס הזה 
+                $bolHTML = false;
 
-                $user_qry1 = "SELECT name_role,name_course,grade from Courses_roles where '" . $name_role . "'=Courses_roles.name_role and '" . $sql_course . "'=75 ";
 
-                //$user_qry1 = "SELECT name_role,name_course,grade from Courses_roles where '".$name_role."'=Courses_roles.name_role and '".$sql_course."'= (SELECT name_course, grade from Courses_roles where grade =75 ";
+                $user_qry1 = "SELECT name_role,name_course,grade,description
+        from Courses_roles INNER JOIN Courses ON Courses_roles.name_course=Courses.name where '" . $name_role . "'=Courses_roles.name_role ";
 
                 $user_res3 = mysqli_query($conn, $user_qry1);
                 $user_res4 = mysqli_query($conn, $user_qry1);
+                $user_res5 = mysqli_query($conn, $user_qry1);
 
 
                 if (empty(mysqli_fetch_assoc($user_res3))) {
@@ -85,63 +83,90 @@ if ($conn->query($sql) == FALSE) {
                     <p class="text-center"> בדף זה מוצגים לך הפערים בין הקורסים שלמדת לבין דרישות התפקיד שבחרת <br> הנתונים שמוצגים לך הם על סמך ביקוש השוק .</p>
                     <br>
                     <br>
-                    <img src="../images/search.jpg" alt="" class="reveal img-responsive reveal-content image-center st_img bigger">
 
+                    <p class="text-center"> אין תוצאות מתאימות </p>
+                    <br>
+                    <br>
+                    <img src="../images/search.jpg" alt="" class="reveal img-responsive reveal-content image-center st_img bigger">
 
                     <br>
 
+                <?php
 
-
-
-                    <?php
                 } else {
                     echo  " <h1 class='text-center'>צעדים לתפקיד הנחשק</h1>";
                     echo    "<p class='text-center'>  בדף זה מוצגים לך הפערים בין הקורסים שלמדת לבין דרישות התפקיד שבחרת <br> הנתונים שמוצגים לך הם על סמך ביקוש השוק .</p>";
+                    $var = 'sql_course';
+                    while ($row = mysqli_fetch_array($user_res4)) {
+
+                        if ($row['name_course'] == 'sql_course' && $sql_course >= ((int)$row['grade'])) {
+                            $bolsql_course = true;
+                            //   echo $row['name_course'] ;
+                        } elseif ($row['name_course'] == 'HTML' && $HTML >= ((int)$row['grade'])) {
+                            $bolHTML = true;
+                        }
+                    }
+
+                    if ($bolsql_course == true && $bolHTML == true) {
+                        echo "you are on the right way to success";
+                    } elseif ($bolsql_course == true && $bolHTML == false) {
+                        echo "you need to get a better grade at HTML ";
+                        while ($row = mysqli_fetch_array($user_res5)) {
+                            if ($row['name_course'] == 'HTML') {
+                                echo $row['description'];
+                            }
+                        }
+                    } elseif ($bolsql_course == false && $bolHTML == true) {
+                        echo "you need to get a better grade at SQL ";
+                    } else {
+                        echo "SQL & HTML ALL OVER AGAIN";
+                    }
 
 
 
-                    while ($user_data = mysqli_fetch_assoc($user_res4)) {
+                    //   echo           "<th>Name</th>"; 
 
-                        echo   "<table dir='rtl' class='table table-bordered print'>";
-                        echo    "<thead>";
-                        echo            "<tr>";
-                        //   echo           "<th>Name</th>"; 
+
+                    //    <?php echo  $user_data['name_role']; 
+                ?></p>
+
+                    <?php
+                    //  echo           "<th>Description</th>";
+
+                    // echo       "</tr>";
+                    //  echo    "</thead>";
+                    //  echo    "<tbody>";
+
+
                     ?>
-                        <p class='text-center' style='color:blue;font-weight:bold;font-size:30px'>
-                            התפקיד שנבחר הוא:<br><br>
-                            <?php echo  $user_data['name_role']; ?></p>
-
-                        <?php
-                        //  echo           "<th>Description</th>";
-
-                        echo       "</tr>";
-                        echo    "</thead>";
-                        echo    "<tbody>";
-
-
-                        ?>
-
+                    <!--
                         <br>
                         <tr>
-                            <!--   <td><//?php echo $user_data['name']; ?></td> -->
-                            <td style='font-weight:bold;font-size:20px'><?php echo 'תיאור התפקיד ' ?></td>
-                            <td class='text-center' style='color:black'> <?php echo  $user_data['name_course']; ?></p>
-                            </td>
 
-                        </tr>
+                        
+                              <td><//?php echo $user_data['name']; ?></td> 
+                            <td style='font-weight:bold;font-size:20px'><?php //echo 'תיאור התפקיד ' 
+                                                                        ?></td>
+                            <td class='text-center' style='color:black'> <?php //echo  $user_data['name_course']; 
+                                                                            ?></p>
+                            
+</td>
 
+                        </tr> -->
             </div>
-    <?php
-                    }
+
+        <?php
+
                 }
-    ?>
-    </tbody>
 
-    </table>
+        ?>
+        </tbody>
 
-    <div class="text-center">
-        <a href="user_data_print.php" class="btn btn-primary">Print</a>
-    </div>
+        </table>
+
+        <div class="text-center">
+            <a href="user_data_print.php" class="btn btn-primary">Print</a>
+        </div>
         </div>
     </div>
     </div>
