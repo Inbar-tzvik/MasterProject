@@ -67,8 +67,8 @@ if ($conn->query($sql) == FALSE) {
 
                 <?php
 
-                $sql_course = False;// הדיפולט הוא שלילי כלומר שהם לא עומדים בתנאי הקורס הזה 
-                $html = False;
+                $bolsql_course = False;// הדיפולט הוא שלילי כלומר שהם לא עומדים בתנאי הקורס הזה 
+                $bolhtml = False;
                 
                   // שאילתא עובדת על כמה קורסים במקביל
                 //    $user_qry1 = "SELECT name_role,name_course,grade from Courses_roles where '".$name_role."'=Courses_roles.name_role AND ('".$sql_course."' and '".$HTML."' and '".$C_course."' =Courses_roles.grade)  GROUP BY name_role ";
@@ -92,7 +92,7 @@ if ($conn->query($sql) == FALSE) {
 
                     while($row=mysqli_fetch_array($user_qry1)){
                         if('".$row['name_course']."'=='sql_course' || $sql_course >='".$row['grade']."'){
-                            $sql_course = True;
+                            $bolsql_course = True;
                         }
                         echo"['".$row['course']."',".$row['number']."],";
                 ?>
