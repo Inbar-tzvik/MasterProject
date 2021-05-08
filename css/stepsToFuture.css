@@ -1,17 +1,3 @@
-/* body,
-div,
-form,
-input,
-p {
-  padding: 0;
-  margin: 0;
-  outline: none;
-  font-family: Roboto, Arial, sans-serif;
-  font-size: 16px;
-  color: rgb(27, 26, 26);
-  line-height: 28px;
-} */
-
 h1 {
   font-weight: 400;
 }
@@ -110,7 +96,7 @@ h4 {
 }
 
 form {
-  width: 60%;
+  width: 65%;
   padding: 20px;
   background: #fff;
   box-shadow: 0 2px 5px #ccc;
@@ -221,4 +207,17 @@ button:hover {
 
 img {
   border-radius: 50%;
+  width: 550px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 500px) {
+  form {
+    width: 85%;
+  }
+  img {
+    width: 350px;
+  }
 }

@@ -35,8 +35,7 @@
               <h1 class="text-center" >צעדים לתפקיד הנחשק</h1>
      
               <div class="section-container-spacer">
-                <img src="../images/img-06.jpg" alt="" class="img-responsive reveal-content" data-action="zoom" style=" border-radius: 50%; width:600px;  display: block;  margin-left: auto;
-  margin-right: auto;">
+                <img src="../images/research.jpg" alt="" class="img-responsive reveal-content" data-action="zoom" >
               </div> 
                             
               <p class="text-center"> ?אז איך זה עובד <br> על ידי בחירת תפקיד ובחירת הקורסים שלמדת והזנת הציונים אנו נציג לך את הצעדים הדרושים לקבלת התפקיד  </p>
@@ -53,7 +52,7 @@
     
     <h4> לפנייך מוצגת רשימה של תפקידים</h4>
     <select name="name_role" id="name_role">
-      <option>אנא בחר תפקיד מהרשימה </option>
+      <option value="" selected disabled hidden>אנא בחר תפקיד מהרשימה</option>
       <option value= "product_manager"> product manager </option>
       <option value="backend_developer"> backend developer</option>
       <option value= "erp">מיישם ERP</option>
@@ -68,25 +67,19 @@
 
     </select>
     <div id="roleErr" class="error" ></div>
-
-
-  <!--  <h4>מסדי נתונים (SQL)</h4>
-     <p id= "sql_course"> <label ><input class="txt" type="int" ></label></p>
-
-    <div id="SQLErr" class="error" ></div> -->
     
      <h5>  אם לא למדת קורס אנא השאר את הציון 0</h5>
 
 
    <h4 for="text">מסדי נתונים (SQL)</h4>
-    <div class="textrow " >
+    <div class="textrow" >
     <input type="text" name="sql_course"  id="sql_course"  value="0" >
     </div>
     
     <div id="SQLErr" class="error" ></div>
        
     <h4 for="text">תוכנת C</h4>
-    <div class="textrow " >
+    <div class="textrow" >
     <input type="text" name="C_course"  id="C_course"   value="0" >
     </div>
     <div id="CErr" class="error" ></div>
@@ -99,160 +92,6 @@
 
 
 
-  <!--  <h4>תוכנת C </h4>
-    <select id ="C">
-      <option>60-65 </option>
-      <option>66-70 </option>
-      <option>71-75</option>
-      <option>76-80</option>
-      <option>81-85</option>
-      <option>86-90</option>
-      <option>91-95</option>
-      <option>96-100</option> 
-      <option>לא נלמד</option> 
-
-    </select>
-    <div id="CErr" class="error" ></div>
-
-
-    <h4>HTML</h4>
-    <select id = "HTML">
-      <option>60-65 </option>
-      <option>66-70 </option>
-      <option>71-75</option>
-      <option>76-80</option>
-      <option>81-85</option>
-      <option>86-90</option>
-      <option>91-95</option>
-      <option>96-100</option>
-      <option>לא נלמד</option> 
- 
-    </select>
-    <div id="HTMLErr" class="error" ></div>
-
-    
-    <h4>PYTHON</h4>
-    <select id="PYTHON">
-      <option>60-65 </option>
-      <option>66-70 </option>
-      <option>71-75</option>
-      <option>76-80</option>
-      <option>81-85</option>
-      <option>86-90</option>
-      <option>91-95</option>
-      <option>96-100</option> 
-      <option>לא נלמד</option> 
-
-    </select>
-    <div id="PYTHONErr" class="error" ></div>
-
-      
-    <h4>ניהול פרויקטים</h4>
-    <select>
-      <option>60-65 </option>
-      <option>66-70 </option>
-      <option>71-75</option>
-      <option>76-80</option>
-      <option>81-85</option>
-      <option>86-90</option>
-      <option>91-95</option>
-      <option>96-100</option> 
-    </select> 
-
-    <h4>SAP ERP </h4>
-    <select id="SAP_ERP">
-      <option>60-65 </option>
-      <option>66-70 </option>
-      <option>71-75</option>
-      <option>76-80</option>
-      <option>81-85</option>
-      <option>86-90</option>
-      <option>91-95</option>
-      <option>96-100</option> 
-      <option>לא נלמד</option> 
-
-    </select>
-    <div id="SAP_ERPErr" class="error" ></div>
-
-
-      
-    <h4>java script</h4>
-    <select id="java_script">
-      <option>60-65 </option>
-      <option>66-70 </option>
-      <option>71-75</option>
-      <option>76-80</option>
-      <option>81-85</option>
-      <option>86-90</option>
-      <option>91-95</option>
-      <option>96-100</option> 
-      <option>לא נלמד</option> 
-
-    </select>
-    <div id="java_scriptErr" class="error" ></div>
-
-    
-    <h4>PHP</h4>
-    <select>
-      <option>60-65 </option>
-      <option>66-70 </option>
-      <option>71-75</option>
-      <option>76-80</option>
-      <option>81-85</option>
-      <option>86-90</option>
-      <option>91-95</option>
-      <option>96-100</option> 
-      <option>לא נלמד</option> 
-
-    </select>
-
-      
-    <h4>ממשק משתמש (UI/UX)</h4>
-    <select id = "UI/UX">
-      <option>60-65 </option>
-      <option>66-70 </option>
-      <option>71-75</option>
-      <option>76-80</option>
-      <option>81-85</option>
-      <option>86-90</option>
-      <option>91-95</option>
-      <option>96-100</option> 
-      <option>לא נלמד</option> 
-
-    </select>
-    <div id="UI_UXErr" class="error" ></div>
-
-
-    <h4>Data Science</h4>
-    <select id="Data_Science">
-      <option>60-65 </option>
-      <option>66-70 </option>
-      <option>71-75</option>
-      <option>76-80</option>
-      <option>81-85</option>
-      <option>86-90</option>
-      <option>91-95</option>
-      <option>96-100</option> 
-      <option>לא נלמד</option> 
-
-    </select>
-    <div id="Data_ScienceErr" class="error" ></div>
-
-    <h4> אחזור מידע </h4>
-    <select>
-      <option>60-65 </option>
-      <option>66-70 </option>
-      <option>71-75</option>
-      <option>76-80</option>
-      <option>81-85</option>
-      <option>86-90</option>
-      <option>91-95</option>
-      <option>96-100</option>
-      <option>לא נלמד</option> 
- 
-    </select>-->
-
-
   <div class="btn-block">
      <button type="submit"  name="submit" > שלח
     </button>   
@@ -260,20 +99,15 @@
 
    </form>
     
-
-
-
 </div>
 
 
-
-    </main>
-
+</main>
 
 
-      <footer>
-        <div id="footer"></div>
-        </footer> 
+  <footer>
+      <div id="footer"></div>
+    </footer> 
     
 
 
