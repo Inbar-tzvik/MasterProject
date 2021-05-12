@@ -34,7 +34,7 @@ if ($conn->query($sql) == FALSE) {
 <html>
 
 <head>
-    <title>PHP Print</title>
+    <title>Result - Find role</title>
 
 
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
@@ -79,6 +79,8 @@ if ($conn->query($sql) == FALSE) {
 
                     if (empty(mysqli_fetch_assoc($user_res1))) {
                     ?>
+                        <br> <br> <br> <br> <br> <br>
+
                         <h1 class="text-center">מציאת תפקיד</h1 <br>
                         <p class="text-center"> לא נמצא תפקיד מתאים <br> לפי הטווחים שהזנת, אנא הזן שנית </p>
                         <br>
@@ -86,7 +88,7 @@ if ($conn->query($sql) == FALSE) {
 
                         <br>
 
-                        <img src="../images/search.jpg" alt="" class="reveal img-responsive reveal-content image-center st_img bigger">
+                        <img src="../images/search.jpg" alt="" class="reveal img-responsive reveal-content image-center " style=" border-radius: 50%; width:500px;  display: block;  margin-left: auto;">
 
                         <br> <br>
 
@@ -100,42 +102,30 @@ if ($conn->query($sql) == FALSE) {
                         echo    "<p class='text-center'>  לאחר שבחרת את תחומי העניין המתאימים עבורך <br>  התוצאה מוצגת לך בדף זה    .</p>";
 
 
-
-
+                        echo " <p class='text-center' style='color:blue;font-weight:bold;font-size:30px'> 
+                           : התפקיד שנבחר הוא<br><br></p>";
+                        echo "<table dir='rtl' class='table table-bordered print'>";
+                        echo "<tr>";
+                        echo "<th>Name</th>";
+                        echo  "<th>Description</th>";
+                        echo "</tr>";
                         while ($user_data = mysqli_fetch_assoc($user_res2)) {
+                            echo  "<tr>";
 
-                            echo   "<table dir='rtl' class='table table-bordered print'>";
-                            echo    "<thead>";
-                            echo            "<tr>";
-                            //   echo           "<th>Name</th>"; 
+                            echo  "<td>  " . $user_data['name'] . " </td>";
+                            echo  "<td> " . $user_data['description'] . "</td>";
+
+
+                            echo   "</tr>";
+
+
                         ?>
-                            <p class='text-center' style='color:blue;font-weight:bold;font-size:30px'>
-                                התפקיד שנבחר הוא:<br><br>
-                                <?php echo           $user_data['name']; ?></p>
-                            <?php
-                            //  echo           "<th>Description</th>";
-
-                            echo       "</tr>";
-                            echo    "</thead>";
-                            echo    "<tbody>";
-
-
-                            ?>
-
-                            <br>
-                            <tr>
-                                <!--   <td><//?php echo $user_data['name']; ?></td> -->
-                                <td style='font-weight:bold;font-size:20px'><?php echo 'תיאור התפקיד ' ?></td>
-                                <td class='text-center' style='color:black'><?php echo $user_data['description']; ?></td>
-
-                            </tr>
 
                 </div>
         <?php
                         }
                     }
         ?>
-        </tbody>
 
         </table>
 
