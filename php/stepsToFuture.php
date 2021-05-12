@@ -94,6 +94,8 @@ if ($conn->query($sql) == FALSE) {
                 <?php
 
                 } else {
+                    echo "\x20\x20\x20";
+
                     echo  " <h1 class='text-center'>צעדים לתפקיד הנחשק</h1>";
                     echo    "<p class='text-center'>  בדף זה מוצגים לך הפערים בין הקורסים שלמדת לבין דרישות התפקיד שבחרת <br> הנתונים שמוצגים לך הם על סמך ביקוש השוק .</p>";
                     $var = 'sql_course';
