@@ -54,7 +54,6 @@ if ($conn->query($sql) == FALSE) {
 
 </head>
 
-
 <body>
     <header>
 
@@ -91,11 +90,6 @@ if ($conn->query($sql) == FALSE) {
                         <img src="../images/search.jpg" alt="" class="reveal img-responsive reveal-content image-center " style=" border-radius: 50%; width:500px;  display: block;  margin-left: auto;">
 
                         <br> <br>
-
-
-
-
-
                         <?php
                     } else {
                         echo  " <h1 class='text-center'>מציאת תפקיד</h1>";
