@@ -5139,3 +5139,25 @@ label {
   /* font-family: Arial, Helvetica, "sans-serif"; */
   font-family: Arial;
 }
+
+.st_img.index {
+  height: 80%;
+}
+
+.error {
+  color: red;
+}
+
+img {
+  width: 400px;
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar-brand {
+    margin-left: 30px;
+  }
+}
+
+.another-text {
+  margin-top: -100px;
+}
