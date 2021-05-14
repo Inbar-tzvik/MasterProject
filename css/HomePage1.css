@@ -5152,12 +5152,32 @@ img {
   width: 400px;
 }
 
+@media only screen and (max-width: 800px) {
+  .navbar-logo-img {
+    margin-left: 35px;
+  }
+
+  .navbar-title {
+    margin-left: -20px;
+  }
+}
+
+#piechart {
+  width: 900px;
+  height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media only screen and (max-width: 500px) {
-  .navbar-brand {
-    margin-left: 30px;
+  #piechart {
+    width: 400px;
+    height: 250px;
   }
 }
 
 .another-text {
   margin-top: -100px;
+  margin-bottom: 35px;
 }

@@ -205,14 +205,6 @@ button:hover {
   }
 }
 
-img {
-  border-radius: 50%;
-  width: 550px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 @media only screen and (max-width: 500px) {
   form {
     width: 85%;
@@ -220,4 +212,8 @@ img {
   img {
     width: 350px;
   }
+}
+
+.text-center {
+  margin-top: -10px;
 }

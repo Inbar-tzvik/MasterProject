@@ -122,11 +122,11 @@ $result = mysqli_query($conn,$sql);
           <span class="icon-bar"></span>
         </button>
 
-        <a class="navbar-brand" href="./index1.html" title="">   
+        <a class="navbar-brand navbar-logo-img" href="./index1.html" title="">   
           <img src="../images/compass.png" class="navbar-logo-img" alt="">   
         </a>
         
-        <a class="navbar-brand" href="./index.html" title="">   
+        <a class="navbar-brand navbar-title" href="./index.html" title="">   
           I.L.M
         </a>
  
@@ -166,11 +166,9 @@ $result = mysqli_query($conn,$sql);
         <div class="col-xs-12 col-md-12">
           <h2 class="text-center">מצב השוק</h2>
           <p>המפה שלפניכם מראה את ביקוש השוק לפי תחומי ידע </p>
-          <div id="piechart" style="width: 900px; height: 500px; display: block;
-  margin-left: auto; margin-right: auto;"></div>
+          <div id="piechart" ></div>
         </div>  
       </div>
-
 
     </div>
   </div>
@@ -179,8 +177,10 @@ $result = mysqli_query($conn,$sql);
                     <div class="col-md-12 text-center">
                         <div class="another-text">
                             <h2>?אז מה זה המערכת ואיך זה עובד</h2>
-                            <p>המערכת באה לעזור לך בעבודה ראשונה בתחום  <br> באתר זה ישנם מספר היבטים </p>
+                            <p>המערכת ממפה עבורך את התפקידים הקיימים בשוק העבודה לפי התאמה אישית  <br> באתר זה תוכלו למצוא מספר היבטים  </p>
                         </div>
+       
+                       
                     </div>
                 </div>
 
@@ -191,7 +191,7 @@ $result = mysqli_query($conn,$sql);
                         <div class=" text-center">
                            <img src="../images/img-05.jpg" alt="" class="reveal img-responsive reveal-content image-center st_img bigger">
                             <h2>מציאת תפקיד</h2>
-                            <p> בדף זה אתה בוחר בסקאלה מ1-10 את רמת התעיינות שלך בתחומים שונים <br> לאחר מכן יוצג עבורך תפקיד בהתאם לפי מה שאתה הגדרת <br> כמובן שהתפקידים שמוצגים עבורך הם בהתאם לפי דרישות שוק</p>
+                            <p> בדף זה אתה מגדיר לפי סקאלה את הזיקה שלך לתחומי עניין. הטווח שיוצג לך הינו מ- 0-10 לכל תחום עניין. לפי סינון המאפיינים השונים, המערכת תשלוף לך את התפקידים המתאימים עבורך</p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
@@ -199,7 +199,7 @@ $result = mysqli_query($conn,$sql);
                             <img src="../images/research.jpg" alt="" class="reveal img-responsive reveal-content image-center st_img bigger ">
                             <i class="material-icons"></i>
                             <h2>צעדים לתפקיד הנחשק</h2>
-                            <p>  בדף זה אתה בוחר את התפקיד שאתה מעוניין ומזין את הציון בקורסים הנדרשים עבור תפקיד זה  <br>  לאחר מכן יוצג עבורך הקורסים שאתה נדרש להשלים כדי להתאים לתפקיד שבחרת </p>
+                            <p> בדף זה אתה בוחר את התפקיד שאתה מחפש מתוך רשימה של קורסים ומזין את הציונים שלך בקורסים הרלוונטיים עבורך. לאחר ההזנה, המערכת מבצעת התאמה בין הציונים שהזנת לציונים שדרושים בשביל התפקיד הנבחר ותציג עבורך את הקורסים אותם אתה צריך להשלים או לשפר בהם את הציון.  </p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
@@ -207,7 +207,7 @@ $result = mysqli_query($conn,$sql);
                             <img src="../images/index-1.jpg" alt="" class="reveal img-responsive reveal-content image-center st_img bigger">
                             <i class="material-icons"></i>
                             <h2>מצב השוק</h2>
-                            <p>  לפניך מוצג מצב השוק לפי תחומי ידע המבוקשים בתעשייה <br>  המפה משתנה באופן דינאמי בהתאם למצב השוק</p>
+                            <p> בדף הבית ניתן לראות דיאגרמה אשר מראה את מצב השוק לפי תחומי הידע המבוקשים ביותר בתעשייה. המפה משתנה באופן דינאמי בהתאם לביקוש בשוק העבודה.</p>
                         </div>
                     </div>
                 </div>
@@ -303,8 +303,7 @@ $result = mysqli_query($conn,$sql);
           <div  dir="rtl" class="card-container">
             <div class="card card-shadow col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 reveal">
 
-            <!--  <form  class="reveal-content" action="../php/users.php" 
-              onSubmit="alert('תודה על המענה');" method="post"> -->
+       
     <form name="contactForm" class="reveal-content" action="../php/users.php"  onsubmit="return validateForm()" method="post"> 
                 <div class="row">
                   <div class="col-md-7">
@@ -324,6 +323,7 @@ $result = mysqli_query($conn,$sql);
                     <div id="commentErr" class="error" ></div>
 
                   <button type="submit" class="btn btn-primary"  name="submit" >שלח משוב</button>
+                  
                <!--   <div class="popup" onclick="myFunction1()" >
                       שלח משוב 
                  <span class="popuptext" id="myPopup">תגובתך נשלחה</span>
