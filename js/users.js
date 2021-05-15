@@ -25,9 +25,12 @@
     }
 
 
+
 // Validate subject
    var subject = document.getElementById("subject").value;
-   var letters = /^[A-Za-z]+$/ || /^[א-ת]+$/ ;
+// var letters = /^[A-Za-z]+$/ ;
+   var letters = (/^[a-zA-Z\u0590-\u05FF\u200f\u200e ]+$/);
+
   
    if(!subject.match(letters)){
    
@@ -53,6 +56,8 @@
 else{
     commentErr =true;
 }
+
+
   
    if((emailErr && subjectErr && commentErr)=== true) {
       
