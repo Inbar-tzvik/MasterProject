@@ -6,7 +6,7 @@ $password = "WwSVtsJ1pMl6";
 $database = "maycois_MasterProject";
 
 
-$conn =  mysqli_connect ($server_name, $username, $password, $database);
+$conn = new mysqli($server_name, $username, $password, $database);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -17,7 +17,7 @@ echo "Connection successful";
 $sql = "SELECT *  FROM roles2";
 $result = mysqli_query($sql, $conn);
 $array = array();
-
+$i = 0;
 while ($row = mysqli_fetch_assoc($result)) {
     $coursename = $row['course'];
     $count = $row['number'];
@@ -40,11 +40,11 @@ echo $data;
 // }
 
 
- $conn->query($sql);
- if ($conn->query($sql) == FALSE) {
-     echo "Can not add new reservation. Error is: " .
-         $conn->error;
-   exit();
- }
+// // $conn->query($sql);
+// if ($conn->query($sql) == FALSE) {
+//     echo "Can not add new reservation. Error is: " .
+//         $conn->error;
+//     exit();
+// }
 
 ?>

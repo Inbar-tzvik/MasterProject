@@ -18,13 +18,10 @@ $subject = $_POST['subject'];
 $email = $_POST['email'];
 $sql = "INSERT INTO `user_information` (`comment`, `subject`,`email`)  VALUES ( '" . $comment . "','" . $subject . "','" . $email . "')";
 
-mysql_query("SET NAMES 'utf8'");
-$conn->query("SET NAMES 'utf8'");
-
 
 //  To redirect form on a particular page
 header("Location:../index.html?status=success");
- 
+
 
 // $conn->query($sql);
 if ($conn->query($sql) == FALSE) {
@@ -34,3 +31,6 @@ if ($conn->query($sql) == FALSE) {
 }
 
 ?>
+
+
+

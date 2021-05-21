@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>יצירת קשר</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
+        <!-- <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="../css/homePage.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div id="header"></div> 
+            
+         </header>
+    
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>יצירת קשר</h2>
+                    </div>
+                    <!-- <div class="col-12">
+                        <a href="">Home</a>
+                        <a href="">Contact</a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+ 
+        <main> 
+
+        <!-- Contact Start -->
+        <div class="contact">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>נשמח לשמוע מכם</p>
+                    <h2>כל הצעה או טענה מתקבלת</h2>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-4 contact-item wow zoomIn" data-wow-delay="0.2s">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <div class="contact-text">
+                                    <h2>מיקום</h2>
+                                    <p>רוטשילד 123, תל אביב  </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 contact-item wow zoomIn" data-wow-delay="0.4s">
+                                <i class="fa fa-phone-alt"></i>
+                                <div class="contact-text">
+                                    <h2>מספר טלפון</h2>
+                                    <p>+012 345 67890</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 contact-item wow zoomIn" data-wow-delay="0.6s">
+                                <i class="far fa-envelope"></i>
+                                <div class="contact-text">
+                                    <h2>אימייל</h2>
+                                    <p>info@example.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+         <div dir="rtl" class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+             <div class="contact-form">
+              <div id="success"></div>
+                  <form name="contactForm" class="reveal-content" action="../php/users.php"  onsubmit="return validateForm()" method="post"    >
+    
+                     <div class="control-group">
+                     <input type="text" class="form-control" id="email" name="email" placeholder="מייל">
+                          <p class="help-block text-danger"></p>
+                          <div id="emailErr" class="error" ></div>
+                        </div>
+                     <div class="control-group">
+                     <input type="text" class="form-control" id="subject" name="subject" placeholder="נושא">
+                      <p class="help-block text-danger"></p>
+                     <div id="subjectErr" class="error" ></div>
+                      </div>
+                    <div class="control-group">
+                     <textarea  type="text" class="form-control" id= "comment" name="comment" placeholder="תגובה" ></textarea>
+                      <p class="help-block text-danger"></p>
+                      <div id="commentErr" class="error" ></div>
+                        </div>
+                      <div>
+                      <button class="btn" type="submit" name="submit"> שלח משוב</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+
+    </main>
+
+        <footer>
+            <div id="footer"></div>
+            </footer> 
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script  src="../js/users.js"></script>
+
+     <!--  <script src="../js/jqBootstrapValidation.min.js"></script>
+        <script src="../js/contact.js"></script> -->
+
+        <!-- Template Javascript -->
+        <script src="js/homePage.js"></script>
+
+        <script defer src="../js/headerfooter.js"></script>
+    </body>
+</html>
