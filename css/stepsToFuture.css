@@ -1,8 +1,13 @@
 h1 {
-  font-weight: 400;
+  font-weight: 500;
 }
 h4 {
   margin: 25px 0 5px;
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 16px;
 }
 
 .question-answer label {
@@ -75,7 +80,7 @@ select {
   color: #666;
   line-height: 22px;
 }
-*/ h1,
+h1,
 h4 {
   margin: 15px 0 4px;
   font-weight: 400;
@@ -120,8 +125,7 @@ select {
   border: 1px solid #ccc;
   background: transparent;
 }
-select,
-table {
+select {
   width: 80%;
 }
 option {
@@ -148,17 +152,6 @@ option {
   padding: 0 20px 10px 0;
 }
 
-th,
-td {
-  width: 18%;
-  padding: 15px 0;
-  border-bottom: 1px solid #ccc;
-  text-align: center;
-  vertical-align: unset;
-  line-height: 18px;
-  font-weight: 400;
-  word-break: break-all;
-}
 .first-col {
   width: 25%;
   text-align: left;
@@ -216,4 +209,23 @@ button:hover {
 
 .text-center {
   margin-top: -10px;
+}
+
+/* text style - answer page */
+.title-answer {
+  font-family: "Heebo", serif;
+  text-align: center;
+  color: #c71585;
+  font-size: 60px;
+}
+.answer {
+  font-family: "Heebo", serif;
+  font-size: 20px;
+  text-align: center;
+  color: #db7093;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
 }

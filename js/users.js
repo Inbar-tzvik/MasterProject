@@ -1,13 +1,4 @@
-// Defining a function to display error message
-//function printError(elemId, hintMsg) {
-  //  document.getElementById(elemId).innerHTML = hintMsg;
-//}
 
-// Defining a function to validate form 
-// Retrieving the values of form elements 
- // var subject = document.contactForm.subject.value;
- // var email = document.contactForm.email.value;
- // var comment = document.contactForm.comment.value;
  function validateForm() {
    var  emailErr,subjectErr,commentErr =true;
    
@@ -16,7 +7,7 @@
    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
    if(!email.match(mailformat))
     {
-       document.getElementById('emailErr').innerHTML="*You have entered an invalid email address!*";
+       document.getElementById('emailErr').innerHTML="*אנא הכנס מייל במבנה חוקי !*";
   emailErr= false;
     }
     
@@ -34,7 +25,7 @@
   
    if(!subject.match(letters)){
    
-      document.getElementById("subjectErr").innerHTML =" You entered an invalid subject, the subject must contain only letters and spaces*";
+      document.getElementById("subjectErr").innerHTML ="אנא הכנס נושא שמכיל רק אותיות ורווחים";
   subjectErr= false;
      }
      
@@ -48,7 +39,7 @@
 
   var comment = document.getElementById("comment").value;
   if(!comment.match(letters)){
-      document.getElementById("commentErr").innerHTML ="You entered an invalid comment, the comment must contain only letters and spaces";  
+      document.getElementById("commentErr").innerHTML ="אנא הכנס תגובה שמכילה רק אותיות ורווחים";  
   commentErr = false;
 }
 
@@ -61,7 +52,7 @@ else{
   
    if((emailErr && subjectErr && commentErr)=== true) {
       
-             alert('The form has been sent successfully');
+             alert('הטופס נשלח בהצלחה, תודה על תגובתך');
                   return true ;
 }
 
