@@ -229,3 +229,10 @@ button:hover {
   margin-left: auto;
   margin-right: auto;
 }
+
+.hero-image {
+  width: 450px;
+  margin-left: 100px;
+  margin-top: 50px;
+  margin-bottom: -30px;
+}

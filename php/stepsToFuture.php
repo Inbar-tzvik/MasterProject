@@ -21,10 +21,11 @@ $PYTHON = $_POST['PYTHON'];
 $UI_UX = $_POST['UI_UX'];
 $SAP_ERP = $_POST['SAP_ERP'];
 $java = $_POST['java'];
-//$C =$_post['C#'];
+$Data_Science = $_POST['Data_Science'];
+$c_sharp = $_POST['c_sharp'];
 
 
-$sql = "INSERT INTO `user_qr` (`name_role`, `sql_course`,`HTML`,`PYTHON`,`UI_UX`,`SAP_ERP`,`java`) VALUES ('" . $name_role . "', " . $sql_course . ", " . $HTML . ",  " . $PYTHON . ", " . $UI_UX . " , " . $SAP_ERP . ", " . $java . " )";
+$sql = "INSERT INTO `user_qr` (`name_role`, `sql_course`,`HTML`,`PYTHON`,`UI_UX`,`SAP_ERP`,`java`, `Data_Science`, `c_sharp` ) VALUES ('" . $name_role . "', " . $sql_course . ", " . $HTML . ",  " . $PYTHON . ", " . $UI_UX . " , " . $SAP_ERP . ", " . $java . " , " . $Data_Science . ", " . $c_sharp . ")";
 
 
 // $conn->query($sql);
@@ -71,6 +72,9 @@ if ($conn->query($sql) == FALSE) {
 
 </header>
 
+
+
+
 <body>
                  <!-- Page Header Start -->
         <div class="page-header">
@@ -92,7 +96,14 @@ if ($conn->query($sql) == FALSE) {
       </div>
       <!-- Page Header End -->
 
-          
+ <link rel="stylesheet" type="text/css" href="../css/loading-bar.css"/>
+<script type="text/javascript" src="../js/loading-bar.js"></script>
+<div class="ldBar"
+  style="width:100%;height:60px",
+  data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)",
+  data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20"></div>
+
+       
           
         <?php
       
@@ -103,7 +114,11 @@ if ($conn->query($sql) == FALSE) {
         $bolUI_UX = false;
         $bolSAP_ERP = false;
         $boljava = false;
-     //   $bolC = false ;
+        $bolData_Science = false;
+        $bolc_sharp = false;
+
+        
+    //  $bolC = false ;
 
         $user_qry1 = "SELECT name_role,name_course,grade,description
         from Courses_roles INNER JOIN Courses ON Courses_roles.name_course=Courses.name where '" . $name_role . "'=Courses_roles.name_role ";
@@ -125,10 +140,11 @@ if ($conn->query($sql) == FALSE) {
             $SAP_ERPdes = $row['description'];
           } elseif ($row['name_course'] == 'java') {
             $javades = $row['description'];
+          } elseif ($row['name_course'] == 'Data_Science') {
+            $Data_Sciencedes = $row['description'];
+          }elseif ($row['name_course'] == 'c_sharp') {
+           $c_sharpdes = $row['description'];
           }
-         // elseif ($row['name_course'] == 'C#') {
-           // $Cdes = $row['description'];
-          //}
         }
         ?>
         
@@ -167,14 +183,15 @@ if ($conn->query($sql) == FALSE) {
               $bolSAP_ERP = true;
             } elseif ($row['name_course'] == 'java' && $java >= ((int)$row['grade'])) {
               $boljava = true;
+            } elseif ($row['name_course'] == 'Data_Science' && $Data_Science >= ((int)$row['grade'])) {
+              $bolData_Science = true;
+            } elseif ($row['name_course'] == 'c_sharp' && $c_sharp >= ((int)$row['grade'])) {
+              $bolc_sharp = true;
             }
-           //  elseif ($row['name_course'] == 'C#' && $c >= ((int)$row['grade'])) {
-           //   $bolC = true;
-          //  }
-            
             
             }
-          if ($bolsql_course == true && $bolHTML == true && $bolPYTHON == true && $bolUI_UX == true &&  $bolSAP_ERP == true && $boljava == true ) {
+            
+          if ($bolsql_course == true && $bolHTML == true && $bolPYTHON == true && $bolUI_UX == true &&  $bolSAP_ERP == true && $boljava == true && $bolData_Science == true && $bolc_sharp == true) {
               
             echo "<br> ";
             echo " <p class='answer' style='color:#DB7093' > אתה בדרך הנכונה ! יש לך את כל הציונים המתאימים בקורסים הנדרשים </p>";
@@ -225,12 +242,18 @@ if ($conn->query($sql) == FALSE) {
               echo  "<td> $javades </td>";
               echo "</tr>";
             }
-            //if ($bolC == false) {
-             // echo  "<tr>";
-            //  echo  "<td>  C# </td>";
-             // echo  "<td> $Cdes </td>";
-            //  echo "</tr>";
-           // }
+            if ($bolData_Science == false) {
+              echo  "<tr>";
+              echo  "<td>  Data_Science </td>";
+              echo  "<td> $Data_Sciencedes </td>";
+              echo "</tr>";
+            }
+            if ($bolc_sharp == false) {
+              echo  "<tr>";
+              echo  "<td>  #C </td>";
+              echo  "<td> $c_sharpdes </td>";
+              echo "</tr>";
+            }
             
           
           }
