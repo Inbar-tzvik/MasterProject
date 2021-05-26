@@ -38,6 +38,16 @@
         <link href="../css/stepsToFuture.css" rel="stylesheet">
 
 
+    <!-- Template form -->
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="custom.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
 
     <style>
       body {
@@ -83,34 +93,226 @@
                 </div>
             </div>
         </div>
-        <!-- Hero End -->
-            <!--  page Header Start -->
-        <!-- <div class="page-header">
-          <div class="container">
-              <div class="row">
-                  <div class="col-12">
-                      <h2> צעדים לתפקיד הנחשק</h2>
-                  </div>
-               
-              </div>
-              <div class="section-container-spacer">
-                <img src="../images/research.jpg" alt="" class="img-responsive reveal-content" data-action="zoom"  style=" border-radius: 50%; width:550px;  display: block;  margin-left: auto;
-                   margin-right: auto;" >
-              </div>
-          </div>
-      </div> -->
-      <!-- Page Header End -->
 
-            
+        <div class="service">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p> ?איך זה עובד</p>
+                </div>
+                <div class="row">
+                  
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="service-item">
+                           
+                        <div class="service-icon">
+                            <i  >   <img src="../images/employment.png" alt="Image" class="small-icon">
+                            </i> 
+                       </div>
+                       
+                        <h3>שלב שלישי</h3>
+                            <p>המערכת תבצע התאמה בין הקורסים שבחרת לבין היכולות הנדרשות לתפקיד וכן היא תשווה בין הציונים של המשתמש לציונים שהעבודה מחפשת ותציג לך את האפשרויות שיכולות לקדם אותך לכיוון עמידה בתנאים של התפקיד הנבחר   .</p>
 
-              <p class="text-center"> ?אז איך זה עובד <br> על ידי בחירת תפקיד ובחירת הקורסים שלמדת והזנת הציונים אנו נציג לך את הצעדים הדרושים לקבלת התפקיד  </p>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="service-item">
+                          
+                        <div class="service-icon">
+                            <i  >   <img src="../images/resize.png" alt="Image" class="small-icon">
+                            </i>                            </div>
+                        <h3>שלב שני</h3>
+                        <p> לאחר בחירת התפקיד, מוצגת לך רשימה של קורסים בתחום מערכות מידע, עלייך לבחור מתוך הרשימה את הקורסים הרלוונטיים אלייך לפי הידע  שרכשת ולהזין את הציונים שלך </p>
+                   
+                    </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
+                        <div class="service-item">
+                            <div class="service-icon"> 
+                                <i  >   <img src="../images/list.png" alt="Image" class="small-icon">
+                                </i>
+                            </div>
+                            <h3>  שלב ראשון </h3>
+                        <p> בשלב ראשון אלייך לבחור את התפקיד בו אתה מתעניין מתוך רשימה של תפקידים   </p>
+                            
 
-              <div id="color-ba"  class="config-panel">
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+        <!-- Service End -->
+ <div class="testbox" >
+<div class="container">
+	<div class="row">
+		<section id="drawerTitle">
+	        <div class="wizard">
+	            <div class="wizard-inner">
+	                <div class="active-line"></div>
+	                <ul class="nav nav-tabs" role="tablist">
+	                    <li role="presentation" class="active stepactive1">
+	                		<div class="connecting-line border-right"></div>
+	                        <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
+	                            <span class="round-tab">
+	                            	1
+	                            </span>
+	                            <p>בחירת תפקיד</p>
+	                        </a>
+	                    </li>
+	                    <li role="presentation" class=" stepactive2">
+	                		<div class="connecting-line border-right border-left"></div>
+	                        <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
+	                            <span class="round-tab">
+	                            	2
+	                            </span>
+	                            <p>	הזנת ציונים</p>
+	                        </a>
+	                    </li>
+	                    <li role="presentation" class=" stepactive3">
+	                		<div class="connecting-line border-right border-left"></div>
+	                        <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
+	                            <span class="round-tab">
+	                            	3
+	                            </span>
+	                            <p>צעדים לתפקיד</p>
+	                        </a>
+	                    </li>
+	        
+	                    
+	                </ul>
+	            </div>
+	  
+	  <form role="form" name="MyForm"  action="../php/stepsToFuture.php"  onSubmit="return validateThisFrom(this)" method="post">
+	                <div class="tab-content">
+	                    <div class="tab-pane active" role="tabpanel" id="step1">
+	                        <h3> בחירה תפקיד</h3>
+	                        <p>
+
+
+    <h4> לפנייך מוצגת רשימה של תפקידים</h4>
+    <select name="name_role" id="name_role">
+      <option value="" selected disabled hidden>אנא בחר תפקיד מהרשימה</option>
+      <option value= "productManager"> product manager </option>
+      <option value="backend_developer"> backend developer</option>
+      <option value= "erp">מיישם ERP</option>
+      <option value= "webDeveloper"> web developer</option>
+      <option value="UI_UX">UI/UX</option>
+      <option value="business_analyst">Business analyst</option>
+      <option value="BI_developer"> מפתח BI</option>
+      <option value="analyst">Application analyst</option>
+      <option value=" Security_information">איש/אשת אבטחת מידע</option>
+      <option value="tech">תמיכה טכנית</option>
+      <option value="analyst_security">מנתח מערכות מידע</option>
+
+    </select>
+    <div id="roleErr" class="error" ></div>
+
+
+	                        <ul class="list-inline">
+	                            <li><button type="button" class="btn next-step">Save and Next  <i class="fa fa-arrow-right"></i></button></li>
+	                        </ul>
+	                    </div>
+	                    <div class="tab-pane" role="tabpanel" id="step2">
+	                        <h3>הזנת ציונים</h3>
+	                        
+     <h5>  אם לא למדת קורס אנא השאר את הציון 0</h5>
+
+
+   <h4 for="text">מסדי נתונים (SQL)</h4>
+    <div class="textrow" >
+    <input type="text" name="sql_course"  id="sql_course"  value="0" >
+    </div>
+
+    <div id="SQLErr" class="error" ></div>
+
+    <h4 for="text">HTML </h4>
+    <div class="textrow " >
+    <input type="text" name="HTML"  id="HTML"   value="0" >
+    </div>
+    <div id="HTMLErr" class="error" ></div>
+
+
+ <h4 for="text">PYTHON </h4>
+    <div class="textrow " >
+    <input type="text" name="PYTHON"  id="PYTHON"   value="0" >
+    </div>
+    <div id="PYTHONErr" class="error" ></div>
+
+<h4 for="text">UI/UX </h4>
+    <div class="textrow " >
+    <input type="text" name="UI_UX"  id="UI_UX"   value="0" >
+    </div>
+    <div id="UI_UXErr" class="error" ></div>
+
+
+<h4 for="text">SAP ERP </h4>
+    <div class="textrow " >
+    <input type="text" name="SAP_ERP"  id="SAP_ERP"   value="0" >
+    </div>
+    <div id="SAP_ERPErr" class="error" ></div>
+
+    <h4 for="text">JAVA </h4>
+    <div class="textrow " >
+    <input type="text" name="java"  id="java"   value="0" >
+    </div>
+    <div id="javaErr" class="error" ></div>
+    
+     <h4 for="text">Data Science </h4>
+    <div class="textrow " >
+    <input type="text" name="Data_Science"  id="Data_Science"   value="0" >
+    </div>
+    <div id="Data_ScienceErr" class="error" ></div>
+
+    <h4 for="text">#C </h4>
+    <div class="textrow " >
+    <input type="text" name="c_sharp"  id="c_sharp"   value="0" >
+    </div>
+    <div id="c_sharpErr" class="error" ></div>
 
 
 
+  <div class="btn-block">
+     <button type="submit"  name="submit" > שלח
+    </button>
+  </div>
 
+   </form>
+   
+  
+  
+	                        <ul class="list-inline">
+	                            <li><button type="button" class="btn prev-step"><i class="fa fa-arrow-left"></i>  Previous</button></li>
+	                            <li><button type="button" class="btn next-step">Save and Next  <i class="fa fa-arrow-right"></i></button></li>
+	                        </ul>
+	                    </div>
+	                    <div class="tab-pane" role="tabpanel" id="step3">
+	                        <h3>צעדים לתפקיד</h3>
+	                        <p>תוצאה מהשרת </p>
+	                        <ul class="list-inline">
+	                            <li><button type="button" class="btn prev-step"><i class="fa fa-arrow-left"></i>  Previous</button></li>
+	                            <li><button type="button" class="btn btn-info-full next-step">Save and Next  <i class="fa fa-arrow-right"></i></button></li>
+	                        </ul>
+	                    </div>
+	                    <div class="tab-pane" role="tabpanel" id="complete">
+	                        <h3>Confirm</h3>
+	                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	                        consequat. </p>
+	                        <ul class="list-inline">
+	                            <li><button type="button" class="btn prev-step"><i class="fa fa-arrow-left"></i>  Previous</button></li>
+	                            <li><button type="button" class="btn btn-info-full next-step">Save and Submit</button></li>
+	                        </ul>
+	                    </div>
+	                    <div class="clearfix"></div>
+	                </div>
+	        </div>
+	         </div>
+    	</section>
+	</div>
+</div>
+
+<div class= "clear"> </div>
+<!-- 
 <div class="testbox" >
   <form name="MyForm"  action="../php/stepsToFuture.php"  onSubmit="return validateThisFrom(this)" method="post">
 
@@ -194,8 +396,9 @@
     </button>
   </div>
 
-   </form>
+   </form> -->
    
+  
   
 
  </div>
