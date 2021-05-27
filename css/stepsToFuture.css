@@ -69,17 +69,6 @@ body {
   min-height: 100%;
 }
 
-form,
-input,
-select {
-  padding: 0;
-  margin: 0;
-  outline: none;
-  font-family: Roboto, Arial, sans-serif;
-  font-size: 14px;
-  color: #666;
-  line-height: 22px;
-}
 h1,
 h4 {
   margin: 15px 0 4px;
@@ -93,18 +82,22 @@ h4 {
 .testbox {
   text-align: right;
   direction: rtl;
-  display: flex;
   justify-content: center;
   align-items: center;
   height: inherit;
   padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
 }
 
 form {
-  width: 65%;
   padding: 20px;
   background: #fff;
   box-shadow: 0 2px 5px #ccc;
+  margin-top: 50px;
+  width: 800px;
 }
 
 textarea:hover,
@@ -126,7 +119,7 @@ select {
   background: transparent;
 }
 select {
-  width: 80%;
+  width: 40%;
 }
 option {
   background: #fff;
@@ -136,12 +129,6 @@ option {
   position: relative;
 }
 
-.day-visited i,
-.time-visited i {
-  right: 5px;
-  z-index: 1;
-  color: #a9a9a9;
-}
 [type="date"]::-webkit-calendar-picker-indicator {
   right: 0;
   z-index: 2;
@@ -179,6 +166,7 @@ button {
 button:hover {
   background-color: #0666a3;
 }
+
 @media (min-width: 568px) {
   .title-block {
     display: flex;
@@ -235,4 +223,184 @@ button:hover {
   margin-left: 100px;
   margin-top: 50px;
   margin-bottom: -30px;
+}
+
+.wizard {
+  background: #f1f1f1;
+  padding: 30px;
+}
+
+.wizard .nav-tabs {
+  position: relative;
+  border: 0px;
+}
+.wizard > div.wizard-inner {
+  position: relative;
+}
+
+.nav-tabs {
+  margin-bottom: -20px;
+}
+/*
+.connecting-line {
+  height: 15px;
+  background: #e0e0e0;
+  position: absolute;
+  width: 99.5%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 44%;
+  z-index: 1;
+  border-radius: 15px;
+}
+.active-line {
+  height: 15px;
+  background: #e0e0e0;
+  position: absolute;
+  width: 99.5%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 44%;
+  z-index: 1;
+  border-radius: 15px !important;
+} */
+.active .connecting-line {
+  background-color: #ff80bf;
+}
+.border-right {
+  border-radius: 15px 0 0 15px;
+}
+.border-left {
+  border-radius: 0;
+}
+.wizard .nav-tabs > li.active > a,
+.wizard .nav-tabs > li.active > a:hover,
+.wizard .nav-tabs > li.active > a:focus {
+  cursor: default;
+  border: 0;
+  color: #ff80bf;
+  border-bottom-color: transparent;
+}
+.nav-tabs li p {
+  padding-top: 70px;
+  font-size: 16px;
+  text-align: center;
+}
+.list-inline {
+  text-align: center;
+}
+span.round-tab {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  display: inline-block;
+  border-radius: 100px;
+  background: #dfe3e4;
+  border: 2px solid #fff;
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  font-size: 25px;
+  margin-right: 77px;
+}
+
+.wizard li.active span.round-tab {
+  background: #ff80bf;
+  color: white;
+  border: 2px solid #fff;
+}
+span.round-tab:hover {
+  color: white;
+  border: 2px solid #fff;
+  background-color: #ff80bf;
+}
+.wizard .nav-tabs > li {
+  width: 30%;
+}
+.wizard .nav-tabs > li a {
+  width: 70px;
+  height: 70px;
+  margin: 20px auto;
+  border-radius: 100%;
+  padding: 0;
+  color: #ff80bf;
+}
+.wizard .tab-pane {
+  position: relative;
+  padding-top: 15px;
+  border-top: 1px solid #fff;
+  margin-top: 50px;
+}
+.next-step:hover,
+.next-step,
+.prev-step:hover,
+.prev-step {
+  position: relative;
+  background-color: #ff80bf;
+  font-size: 16px;
+  color: #ffffff;
+}
+@media (min-width: 320px) and (max-width: 360px) {
+  .wizard {
+    width: 90%;
+    height: auto !important;
+  }
+  span.round-tab {
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .wizard .nav-tabs > li a {
+    width: 50px;
+    height: 50px;
+  }
+  .wizard li.active:after {
+    content: " ";
+    position: absolute;
+    left: 35%;
+  }
+  .next-step {
+    margin-top: 10px;
+  }
+  .nav-tabs li p {
+    padding-top: 60px;
+    font-size: 16px;
+    text-align: center;
+  }
+  .connecting-line,
+  .active-line {
+    top: 43%;
+  }
+}
+
+#drawerTitle {
+  margin-right: 20px;
+}
+
+.tab-content {
+  margin-top: -60px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.check {
+  margin-left: auto;
+}
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url("http://www.downgraf.com/wp-content/uploads/2014/09/01-progress.gif?e44397")
+    50% 50% no-repeat rgb(249, 249, 249);
 }
