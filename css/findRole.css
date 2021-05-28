@@ -1,148 +1,205 @@
-.abc {
-  float: right;
-  width: 20%;
-  text-align: right;
+
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.one {
-  float: right;
-  width: 70%;
-  float: right;
+html {
+    height: 100%;
+    background: #FAEBD7;
+    background: -webkit-linear-gradient(to left, #6441A5, #2a0845); /* Chrome 10-25, Safari 5.1-6 */
+}
+
+body {
+    font-family: montserrat, arial, verdana;
+    background: transparent;
+}
+
+/*form styles*/
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+   
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 110%;
+    margin: 0 10%;
+
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+/*inputs*/
+#msform input, #msform textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+     font-size: 18px;
+}
+
+#msform input:focus, #msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ee0979;
+    outline-width: 0;
+    transition: All 0.5s ease-in;
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+}
+
+/*buttons*/
+#msform .action-button {
+    width: 100px;
+    background: #ee0979;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button:hover, #msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979;
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #C5C5F1;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button-previous:hover, #msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
+}
+
+/*headings*/
+.fs-title {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 25px;
+    color: #666;
+    margin-bottom: 20px;
 }
 
 #block1 {
-  border-radius: 5px;
   padding: 20px;
-  width: 80%;
-  height: 1300px;
+  width: 70%;
+  height: 100%;
   margin-top: 50px;
-  border: 2px solid rgb(148, 143, 143);
+  display: block;
+  font-size: 40px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
 }
 
-form,
-input,
-p {
-  text-align: right;
-  direction: rtl;
-  padding: 0;
-  margin: 0;
-  outline: none;
-  font-family: Roboto, Arial, sans-serif;
-  font-size: 16px;
-  color: rgb(27, 26, 26);
-  line-height: 28px;
+.hero-image {
+  width: 450px;
+  margin-left: 100px;
+  margin-top: 50px;
+  margin-bottom: -30px;
+
 }
 
-#color-ba {
-  background-color: #d8d5d5b6;
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: black;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 10%;
+	float: right;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:last-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+   background: #67d5bf;
+	color: white;
+}
+.loader {
+ position: fixed;
+ left: 0px;
+ top: 0px;
+ width: 100%;
+ height: 100%;
+ z-index: 9999;
+ background: url('http://www.downgraf.com/wp-content/uploads/2014/09/01-progress.gif?e44397') 50% 50% no-repeat rgb(249,249,249);
 }
 
-@media only screen and (max-width: 500px) {
-  #block1 {
-    height: 1050px;
-  }
-}
 
-.slidecontainer {
-  width: 100%;
-}
 
-.slider {
-  /*  background: linear-gradient(to left, #82CFD0 0%, #82CFD0 100%, #fff 100%, #fff 100%);*/
-  border: solid 1px #82cfd0;
-  border-radius: 8px;
-  height: 15px;
-  width: 100%;
-  outline: none;
-  transition: background 450ms ease-in;
-  -webkit-appearance: none;
-}
-/* { -webkit-appearance: none;
-  width: 100%;
-  height: 15px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: 0.2s;
-  transition: opacity 0.2s;
-  background: linear-gradient(to right, #82CFD0 0%, #82CFD0 50%, #fff 50%, #fff 100%;);
-}*/
-
-.slider:hover {
-  opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #ff69b4;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #04aa6d;
-  cursor: pointer;
-}
-
-/* text style - answer page */
-.title-answer {
-  font-family: "Heebo", serif;
-  text-align: center;
-  color: #c71585;
-  font-size: 60px;
-}
-.answer {
-  font-family: "Heebo", serif;
-  font-size: 20px;
-  text-align: center;
-  color: #db7093;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* button style */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 2s;
-  animation-name: animatebottom;
-  animation-duration: 2s;
-}
-@-webkit-keyframes animatebottom {
-  from {
-    bottom: -50px;
-    opacity: 0;
-  }
-  to {
-    bottom: 0px;
-    opacity: 1;
-  }
-}
-@keyframes animatebottom {
-  from {
-    bottom: -50px;
-    opacity: 0;
-  }
-  to {
-    bottom: 0;
-    opacity: 1;
-  }
-}
