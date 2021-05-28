@@ -9,8 +9,6 @@
     <meta content="Free Website Template" name="description">
 
 
-
-
           
           <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
           <link href="./assets/favicon.ico" rel="icon">
@@ -39,13 +37,12 @@
 
 
     <!-- Template form -->
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!--	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
 		<link rel="stylesheet" type="text/css" href="custom.css">
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
+  		<!--	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> -->
 
 
 
@@ -55,6 +52,7 @@
         font-size: 22px;
 
       }
+      
     </style>
 </head>
 
@@ -62,7 +60,7 @@
 
     <header>
         
- <div id="header" ></div>
+ <div  id="header" ></div>
 
     
     </header>
@@ -78,11 +76,7 @@
                     <div class="col-sm-10 col-md-6 ">
                         <div class="hero-text text-center">
                             <h1>צעדים לתפקיד הנחשק</h1>
-                          
-                            <!-- <div class="hero-btn">
-                                <a class="btn" href="">Join Now</a>
-                                <a class="btn" href="">Contact Us</a>
-                            </div> -->
+                
                         </div>
                     </div>
                     <div class="col-sm-10 col-md-6 d-none d-md-block">
@@ -93,7 +87,8 @@
                 </div>
             </div>
         </div>
-
+   <!-- Hero finish -->
+   
         <div class="service">
             <div class="container">
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
@@ -149,31 +144,34 @@
 	            <div class="wizard-inner">
 	                <div class="active-line"></div>
 	                <ul class="nav nav-tabs" role="tablist">
+	                    
 	                    <li role="presentation" class="active stepactive1">
 	                		<div class="connecting-line border-right"></div>
-	                        <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
+	                        <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab">
 	                            <span class="round-tab">
 	                            	1
 	                            </span>
-	                            <p>בחירת תפקיד</p>
+	                          <p> לפי שמתחילים </p>
+	          
 	                        </a>
+	                        
 	                    </li>
-	                    <li role="presentation" class=" stepactive2">
+	                    <li role="presentation" class="stepactive2">
 	                		<div class="connecting-line border-right border-left"></div>
-	                        <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
+	                        <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" >
 	                            <span class="round-tab">
 	                            	2
 	                            </span>
-	                            <p>	הזנת ציונים</p>
+	                            <p>	בחירת תפקיד</p>
 	                        </a>
 	                    </li>
 	                    <li role="presentation" class=" stepactive3">
 	                		<div class="connecting-line border-right border-left"></div>
-	                        <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
+	                        <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab">
 	                            <span class="round-tab">
 	                            	3
 	                            </span>
-	                            <p>צעדים לתפקיד</p>
+	                            <p>הזנת ציונים</p>
 	                        </a>
 	                    </li>
 	        
@@ -182,9 +180,26 @@
 	            </div>
 	  
 	  <form role="form" name="MyForm"  action="../php/stepsToFuture.php"  onSubmit="return validateThisFrom(this)" method="post">
-	                <div class="tab-content">
+	                <div class=" tab-content">
 	                    <div class="tab-pane active" role="tabpanel" id="step1">
-	                        <h3> בחירה תפקיד</h3>
+	                  <p style="text-align: center;"><span style="color: #800080;"><strong>כמה דגשים חשובים:</strong></span></p>
+<p style="text-align: center;">במערכת ישנם אפשרויות נוספות שניתן לראות ולחקור לפני שמחליטים איזה תפקיד אני מעוניין להגיע אליו, ממליצות לך להסתכל ולראות מה המצב בשוק בכל רגע נתון ולהבין האם יש חוסר או ביקוש באותו תחום.</p>
+<p style="text-align: center;">כמובן שאפשר לראות גם כמה ביקוש יש לתפקיד שאתה מעוניין או לתפקידים שונים, בעמוד "מה שחם עכשיו".</p>
+<p style="text-align: center;">אנו בנינו אלגוריתם שמציג במיוחד בשבילך את הקורסים שאתה צריך להשתפר לתפקיד שאתה מעוניין בו.</p>
+<p style="text-align: center;">הדרישות לתפקידים נבנו לאחר סקירת שוק ודרישות לתפקידים</p>
+<p style="text-align: center;">כמו כן, לכל דבר יש יוצאי מהכלל</p>
+<p style="text-align: center;">וישנם תפקידים במקומות שונים שאינם דורשים את אותם קורסים&nbsp;</p>
+<p style="text-align: center;"><strong>אז אל ייאוש, שיהיה בהצלחה&nbsp;!<img src="https://html-cleaner.com/tinymce2016/plugins/emoticons/img/smiley-smile.gif" alt="smile" /></strong>
+<br><br> ~ברגע שאתה מוכן תלחץ על מספר 2 למעלה~
+</p>
+
+	                       <!-- <ul class="list-inline">
+	                            <li><button type="button" class="btn next-step">Save and Next  <i class="fa fa-arrow-right"></i></button></li>
+	                        </ul> -->
+	                    </div>
+	                    <div class="tab-pane" role="tabpanel" id="step2">
+	                        
+	                         <p style="text-align: center;"><span style="color: #800080;"><strong>בחירת תפקיד:</strong></span></p>
 	                        <p>
 
 
@@ -205,16 +220,29 @@
 
     </select>
     <div id="roleErr" class="error" ></div>
+    <br><br> 
+        <br><br> 
 
-
-	                        <ul class="list-inline">
-	                            <li><button type="button" class="btn next-step">Save and Next  <i class="fa fa-arrow-right"></i></button></li>
-	                        </ul>
-	                    </div>
-	                    <div class="tab-pane" role="tabpanel" id="step2">
-	                        <h3>הזנת ציונים</h3>
+    
+<br><br> ~לאחר בחירת תפקיד מהרשימה לחץ על מספר 3 ~
 	                        
-     <h5>  אם לא למדת קורס אנא השאר את הציון 0</h5>
+	                        
+	                        
+	                        
+  
+  
+	            <!-- <ul class="list-inline">
+	              <li><button type="button" class="btn prev-step"><i class="fa fa-arrow-left"></i>  Previous</button></li>
+	                   <li><button type="button" class="btn next-step">Save and Next  <i class="fa fa-arrow-right"></i></button></li>
+	                        </ul>-->
+	                    </div>
+	                    <div class="tab-pane" role="tabpanel" id="step3">
+	                        
+	                        
+        <p style="text-align: center;"><span style="color: #800080;"><strong> הזנת ציונים :</strong></span> 
+        <br>
+        אם לא למדת קורס אנא השאר את הציון 
+        </p>	                        
 
 
    <h4 for="text">מסדי נתונים (SQL)</h4>
@@ -271,28 +299,18 @@
 
 
   <div class="btn-block">
-     <button type="submit"  name="submit" > שלח
+     <button type="submit"  name="submit" > בהצלחה
     </button>
   </div>
 
    </form>
    
-  
-  
-	                        <ul class="list-inline">
-	                            <li><button type="button" class="btn prev-step"><i class="fa fa-arrow-left"></i>  Previous</button></li>
-	                            <li><button type="button" class="btn next-step">Save and Next  <i class="fa fa-arrow-right"></i></button></li>
-	                        </ul>
-	                    </div>
-	                    <div class="tab-pane" role="tabpanel" id="step3">
-	                        <h3>צעדים לתפקיד</h3>
-	                        <p>תוצאה מהשרת </p>
-	                        <ul class="list-inline">
-	                            <li><button type="button" class="btn prev-step"><i class="fa fa-arrow-left"></i>  Previous</button></li>
+	                        <!--   <ul class="list-inline">
+	                            <li><button type="button" class="btn prev-step"><i class="fa fa-arrow-left"></i>  Previous</button></li> 
 	                            <li><button type="button" class="btn btn-info-full next-step">Save and Next  <i class="fa fa-arrow-right"></i></button></li>
-	                        </ul>
+	                        </ul> -->
 	                    </div>
-	                    <div class="tab-pane" role="tabpanel" id="complete">
+	                   <!-- <div class="tab-pane" role="tabpanel" id="complete">
 	                        <h3>Confirm</h3>
 	                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -304,102 +322,12 @@
 	                        </ul>
 	                    </div>
 	                    <div class="clearfix"></div>
-	                </div>
+	                </div> -->
 	        </div>
 	         </div>
     	</section>
 	</div>
 </div>
-
-<div class= "clear"> </div>
-<!-- 
-<div class="testbox" >
-  <form name="MyForm"  action="../php/stepsToFuture.php"  onSubmit="return validateThisFrom(this)" method="post">
-
-
-    <h4> לפנייך מוצגת רשימה של תפקידים</h4>
-    <select name="name_role" id="name_role">
-      <option value="" selected disabled hidden>אנא בחר תפקיד מהרשימה</option>
-      <option value= "productManager"> product manager </option>
-      <option value="backend_developer"> backend developer</option>
-      <option value= "erp">מיישם ERP</option>
-      <option value= "webDeveloper"> web developer</option>
-      <option value="UI_UX">UI/UX</option>
-      <option value="business_analyst">Business analyst</option>
-      <option value="BI_developer"> מפתח BI</option>
-      <option value="analyst">Application analyst</option>
-      <option value=" Security_information">איש/אשת אבטחת מידע</option>
-      <option value="tech">תמיכה טכנית</option>
-      <option value="analyst_security">מנתח מערכות מידע</option>
-
-    </select>
-    <div id="roleErr" class="error" ></div>
-
-     <h5>  אם לא למדת קורס אנא השאר את הציון 0</h5>
-
-
-   <h4 for="text">מסדי נתונים (SQL)</h4>
-    <div class="textrow" >
-    <input type="text" name="sql_course"  id="sql_course"  value="0" >
-    </div>
-
-    <div id="SQLErr" class="error" ></div>
-
-    <h4 for="text">HTML </h4>
-    <div class="textrow " >
-    <input type="text" name="HTML"  id="HTML"   value="0" >
-    </div>
-    <div id="HTMLErr" class="error" ></div>
-
-
- <h4 for="text">PYTHON </h4>
-    <div class="textrow " >
-    <input type="text" name="PYTHON"  id="PYTHON"   value="0" >
-    </div>
-    <div id="PYTHONErr" class="error" ></div>
-
-<h4 for="text">UI/UX </h4>
-    <div class="textrow " >
-    <input type="text" name="UI_UX"  id="UI_UX"   value="0" >
-    </div>
-    <div id="UI_UXErr" class="error" ></div>
-
-
-<h4 for="text">SAP ERP </h4>
-    <div class="textrow " >
-    <input type="text" name="SAP_ERP"  id="SAP_ERP"   value="0" >
-    </div>
-    <div id="SAP_ERPErr" class="error" ></div>
-
-    <h4 for="text">JAVA </h4>
-    <div class="textrow " >
-    <input type="text" name="java"  id="java"   value="0" >
-    </div>
-    <div id="javaErr" class="error" ></div>
-    
-     <h4 for="text">Data Science </h4>
-    <div class="textrow " >
-    <input type="text" name="Data_Science"  id="Data_Science"   value="0" >
-    </div>
-    <div id="Data_ScienceErr" class="error" ></div>
-
-    <h4 for="text">#C </h4>
-    <div class="textrow " >
-    <input type="text" name="c_sharp"  id="c_sharp"   value="0" >
-    </div>
-    <div id="c_sharpErr" class="error" ></div>
-
-
-
-  <div class="btn-block">
-     <button type="submit"  name="submit" > שלח
-    </button>
-  </div>
-
-   </form> -->
-   
-  
-  
 
  </div>
 </main>
