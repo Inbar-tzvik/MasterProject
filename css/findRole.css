@@ -10,14 +10,22 @@
 
 html {
     height: 100%;
-    background: #FAEBD7;
+    background: white;
     background: -webkit-linear-gradient(to left, #6441A5, #2a0845); /* Chrome 10-25, Safari 5.1-6 */
+    font-family: "Open Sans";
 }
 
 body {
     font-family: montserrat, arial, verdana;
     background: transparent;
 }
+
+.title_1{
+text-align: center;
+    
+}
+
+
 
 /*form styles*/
 #msform {
@@ -34,13 +42,16 @@ body {
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
     padding: 20px 30px;
     box-sizing: border-box;
-    width: 110%;
-    margin: 0 10%;
+    width: 75%;
+    height:320px;
+    margin-left: auto;
+    margin-right: auto;
 
 
     /*stacking fieldsets above each other*/
     position: relative;
 }
+
 
 /*Hide all except first fieldset*/
 #msform fieldset:not(:first-of-type) {
@@ -117,22 +128,23 @@ body {
 
 .fs-subtitle {
     font-weight: normal;
-    font-size: 25px;
+    font-size: 23px;
     color: #666;
     margin-bottom: 20px;
 }
 
 #block1 {
   padding: 20px;
-  width: 70%;
+  width: 80%;
   height: 100%;
-  margin-top: 50px;
-  display: block;
+  margin-top: 30px;
   font-size: 40px;
-  display: block;
   margin-left: auto;
   margin-right: auto;
+
+
 }
+
 
 .hero-image {
   width: 450px;
@@ -144,19 +156,25 @@ body {
 
 /*progressbar*/
 #progressbar {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	overflow: hidden;
 	/*CSS counters to number the steps*/
 	counter-reset: step;
+	width:1000px;
+
+
+
 }
 #progressbar li {
 	list-style-type: none;
 	color: black;
 	text-transform: uppercase;
-	font-size: 9px;
+	font-size:11px;
 	width: 10%;
 	float: right;
 	position: relative;
+
+	
 }
 #progressbar li:before {
 	content: counter(step);
@@ -188,7 +206,7 @@ body {
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,  #progressbar li.active:after{
-   background: #67d5bf;
+   background:  #ff80d5;
 	color: white;
 }
 .loader {
@@ -201,5 +219,69 @@ body {
  background: url('http://www.downgraf.com/wp-content/uploads/2014/09/01-progress.gif?e44397') 50% 50% no-repeat rgb(249,249,249);
 }
 
+h2 {
+    text-align: center;
+}
+
+h4{
+     text-align: center;
+     margin-bottom:-20px;
+       margin-left: auto;
+  margin-right: auto;
+    
+}
+
+.slider{
+     direction: rtl
+}
+.card{
+  width: 20%;
+  /*height: 450px;*/
+margin: 30px auto;
+display:inline-block;
+
+}
+.scrollable{
+  overflow-y: auto;
+  max-height: 260px;
+}
 
 
+h5{
+    color:black;
+    font-size:30px;
+ 
+}
+.card-custom-img {
+  height: 200px;
+  min-height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-color: inherit;
+}
+
+/* First border-left-width setting is a fallback */
+.card-custom-img::after {
+  position: absolute;
+  content: '';
+  top: 161px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top-width: 40px;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 545px;
+  border-left-width: calc(575px - 5vw);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: inherit;
+}
+.card-custom {
+  overflow: hidden;
+  min-height: 450px;
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+}
