@@ -42,6 +42,9 @@
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   		<!--	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> -->
 
 
@@ -105,7 +108,7 @@
                        </div>
                        
                         <h3>שלב שלישי</h3>
-                            <p>המערכת תבצע התאמה בין הקורסים שבחרת לבין היכולות הנדרשות לתפקיד וכן היא תשווה בין הציונים של המשתמש לציונים שהעבודה מחפשת ותציג לך את האפשרויות שיכולות לקדם אותך לכיוון עמידה בתנאים של התפקיד הנבחר   .</p>
+                            <p>לבסוף,המערכת תבצע התאמה בין הקורסים שבחרת לבין היכולות הנדרשות לתפקיד וכן היא תשווה בין הציונים שלך לציונים שהתפקיד דורש ותציג לך את האפשרויות שיכולות לקדם אותך לכיוון עמידה בתנאים של התפקיד הנבחר   .</p>
 
                     </div>
                     </div>
@@ -181,7 +184,7 @@
 	  
 	  <form role="form" name="MyForm"  action="../php/stepsToFuture.php"  onSubmit="return validateThisFrom(this)" method="post">
 	                <div class=" tab-content">
-	                    <div class="tab-pane active" role="tabpanel" id="step1">
+<div class="tab-pane active" role="tabpanel" id="step1">
 	                  <p style="text-align: center;"><span style="color: #800080;"><strong>כמה דגשים חשובים:</strong></span></p>
 <p style="text-align: center;">במערכת ישנם אפשרויות נוספות שניתן לראות ולחקור לפני שמחליטים איזה תפקיד אני מעוניין להגיע אליו, ממליצות לך להסתכל ולראות מה המצב בשוק בכל רגע נתון ולהבין האם יש חוסר או ביקוש באותו תחום.</p>
 <p style="text-align: center;">כמובן שאפשר לראות גם כמה ביקוש יש לתפקיד שאתה מעוניין או לתפקידים שונים, בעמוד "מה שחם עכשיו".</p>
@@ -193,17 +196,17 @@
 <br><br> ~ברגע שאתה מוכן תלחץ על מספר 2 למעלה~
 </p>
 
-	                       <!-- <ul class="list-inline">
+	                        <ul class="list-inline">
 	                            <li><button type="button" class="btn next-step">Save and Next  <i class="fa fa-arrow-right"></i></button></li>
-	                        </ul> -->
+	                        </ul> 
 	                    </div>
-	                    <div class="tab-pane" role="tabpanel" id="step2">
+<div class="tab-pane" role="tabpanel" id="step2">
 	                        
-	                         <p style="text-align: center;"><span style="color: #800080;"><strong>בחירת תפקיד:</strong></span></p>
+<p style="text-align: center;"><span style="color: #800080;"><strong>בחירת תפקיד:</strong></span></p>
 	                        <p>
 
 
-    <h4> לפנייך מוצגת רשימה של תפקידים</h4>
+<h4> לפנייך מוצגת רשימה של תפקידים</h4>
     <select name="name_role" id="name_role">
       <option value="" selected disabled hidden>אנא בחר תפקיד מהרשימה</option>
       <option value= "productManager"> product manager </option>
@@ -231,10 +234,10 @@
 	                        
   
   
-	            <!-- <ul class="list-inline">
+	             <ul class="list-inline">
 	              <li><button type="button" class="btn prev-step"><i class="fa fa-arrow-left"></i>  Previous</button></li>
 	                   <li><button type="button" class="btn next-step">Save and Next  <i class="fa fa-arrow-right"></i></button></li>
-	                        </ul>-->
+	                        </ul>
 	                    </div>
 	                    <div class="tab-pane" role="tabpanel" id="step3">
 	                        
