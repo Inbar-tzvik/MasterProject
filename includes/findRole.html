@@ -82,7 +82,7 @@
                        </div>
                        
                         <h3>שלב שלישי</h3>
-                            <p> בסיום יוצג לך הצעות של תפקידים שמתאימים במיוחד בשבילך לפי מה שהגדרת .</p>
+                            <p> בסיום יוצג לך הצעות של תפקידים שמתאימים במיוחד בשבילך לפי מה שהגדרת </p>
 
                     </div>
                     </div>
@@ -93,7 +93,7 @@
                             <i  >   <img src="../images/resize.png" alt="Image" class="small-icon">
                             </i>                            </div>
                         <h3>שלב שני</h3>
-                        <p>  .תחילה מגדירים לפי סקאלה את הזיקה שלך לתחומי עניין.   <br> הטווח שמוצג לך הינו מ- 0-10 לכל תחום עניין ככל שהתחום עניין מתאים לך תתן לו מספר גבוה יותר</p>
+                        <p>  תחילה מגדירים לפי סקאלה את הזיקה שלך לתחומי עניין   <br> הטווח שמוצג לך הינו מ- 0-10 לכל תחום עניין ככל שהתחום עניין מתאים לך תתן לו מספר גבוה יותר</p>
                    
                     </div>
                     </div>
@@ -114,10 +114,8 @@
         </div>
         <!-- Service End -->
 
-         <div id="block1">
-       <!-- <form name="MyForm"   action="../php/findRole.php"  onsubmit="return myFunction()" method="post">-->
 
-         <h3 dir="rtl">  הגדירו עד כמה התחום עניין מתאים עבורכם</h3>
+         <h4 id="target">  הגדירו עד כמה התחום עניין מתאים עבורכם</h4>
         <br>
 
                        <!-- MultiStep Form -->
@@ -129,79 +127,100 @@
  
             <!-- progressbar -->
             <ul id="progressbar">
-                <li class="active">אוריינטציה ניהולית</li>
+                <li class="active">בואו נתחיל</li>
+                <li >אוריינטציה ניהולית</li>
                 <li>אוריינטציה עיצובית </li>
                 <li>אוריינטציה תכנותית </li>
                 <li>עבודה בצוות </li>
                 <li>ניתוח ואפייון בעזרת תרשימים </li>
                 <li>יכולות הדרכה </li>
                 <li>יכולות ניתוח והסקה </li>
+                <li>סיום</li>
 
               </ul>
- 
+        
+            <div id="managementErr" class="error" ></div>
+            <div id="designErr" class="error" ></div>
+            <div id="softwareErr" class="error" ></div>
+            <div id="workInATeamErr" class="error" ></div>
+            <div id="analysisCapabilitiesErr" class="error" ></div>
                      <br>
+        <!-- fieldsets -->
+        
+         <fieldset  >
+            <h2 class="fs-title">המסע למצוא את התפקיד שלכן</h2>
+            <h3 class="fs-subtitle"> השאלון מורכב ממספר שלבים שבסופו בתקווה נמצא עבורכן את התפקיד שיכול להיות שהוא תפקידכם הבא :) </h3>
+            <div class="range-slider">
+        
+            </div>
+            <br>
+            <input type="button" name="next" class="next action-button" value="הבא"/>
+            </fieldset>
+            
               <!-- fieldsets -->
-            <fieldset>
+            <fieldset >
                 <h2 class="fs-title">אוריינטציה ניהולית</h2>
                 <h3 class="fs-subtitle">עד כמה עולם הניהול והיכולת הניהולית שלך גבוהה</h3>
                  <div class="range-slider.grad">
                 <input  type="range" value="0" min="0" max="10" class="slider" oninput="this.nextElementSibling.value = this.value" name="management" id="management">
                 <output>0</output>
-               <div id="managementErr" class="error" ></div>
+              
               </div>
-                <input type="button" name="next" class="next action-button" value="Next"/>
+                <input type="button" name="next" class="next action-button" value="הבא"/>
+              <input type="button" name="previous" class="previous action-button-previous" value="חזור"/>
+               
             </fieldset>
             
              <!-- fieldsets -->
             <fieldset>
                 <h2 class="fs-title">אוריינטציה עיצובית</h2>
-                <h3 class="fs-subtitle">עד כעד כמה עולם העיצוב שלך גבוה </h3>
+                <h3 class="fs-subtitle">עד כמה כמה עולם העיצוב שלך גבוה </h3>
                  <div class="range-slider.grad">
                 <input  type="range" value="0" min="0" max="10" class="slider" oninput="this.nextElementSibling.value = this.value" name="design" id="design">
                 <output>0</output>
-               <div id="designErr" class="error" ></div>
+              
               </div>
-              <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="button" name="next" class="next action-button" value="Next"/>
+             <input type="button" name="next" class="next action-button" value="הבא"/>
+              <input type="button" name="previous" class="previous action-button-previous" value="חזור"/>
             </fieldset>
             
              <!-- fieldsets -->
             <fieldset>
                 <h2 class="fs-title">אוריינטציה תכנותית</h2>
-                <h3 class="fs-subtitle">עד כעד כמה עולם התכנות שלך גבוה </h3>
+                <h3 class="fs-subtitle">עד כמה כמה עולם התכנות שלך גבוה </h3>
                  <div class="range-slider.grad">
                 <input  type="range" value="0" min="0" max="10" class="slider" oninput="this.nextElementSibling.value = this.value" name="software" id="software">
                 <output>0</output>
-                <div id="softwareErr" class="error" ></div>
+                
               </div>
-              <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="button" name="next" class="next action-button" value="Next"/>
+            <input type="button" name="next" class="next action-button" value="הבא"/>
+              <input type="button" name="previous" class="previous action-button-previous" value="חזור"/>
             </fieldset>
             
             <!-- fieldsets -->
             <fieldset>
                 <h2 class="fs-title">עבודה בצוות</h2>
-                <h3 class="fs-subtitle">עד כעד כמה עולם התכנות שלך גבוה </h3>
+                <h3 class="fs-subtitle">עד כמה אתה אוהב לעבוד בצוות ומסתדר בעבודה בצוותים </h3>
                  <div class="range-slider.grad">
                 <input  type="range" value="0" min="0" max="10" class="slider" oninput="this.nextElementSibling.value = this.value" name="workInATeam" id="workInATeam">
                 <output>0</output>
-                <div id="workInATeamErr" class="error" ></div>
+               
               </div>
-              <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="button" name="next" class="next action-button" value="Next"/>
+            <input type="button" name="next" class="next action-button" value="הבא"/>
+              <input type="button" name="previous" class="previous action-button-previous" value="חזור"/>
             </fieldset>
             
               <!-- fieldsets -->
             <fieldset>
                 <h2 class="fs-title">ניתוח ואיפיון בעזרת תרשימים</h2>
-                <h3 class="fs-subtitle">עד כעד כמה עולם התכנות שלך גבוה </h3>
+                <h3 class="fs-subtitle">עד כמה היכולת שלך לכתוב תרשימים להבין אותם גבוהה </h3>
                  <div class="range-slider.grad">
                 <input  type="range" value="0" min="0" max="10" class="slider" oninput="this.nextElementSibling.value = this.value" name="umlDiagramOriented" id="umlDiagramOriented">
                 <output>0</output>
                 <div id="umlDiagramOrientedErr" class="error" ></div>
               </div>
-              <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="button" name="next" class="next action-button" value="Next"/>
+             <input type="button" name="next" class="next action-button" value="הבא"/>
+              <input type="button" name="previous" class="previous action-button-previous" value="חזור"/>
             </fieldset>
 
 
@@ -209,34 +228,48 @@
              <!-- fieldsets -->
             <fieldset>
                 <h2 class="fs-title">יכולות הדרכה</h2>
-                <h3 class="fs-subtitle">עד כעד כמה עולם התכנות שלך גבוה </h3>
+                <h3 class="fs-subtitle">באיזה מידה עולם ההדרכה וההכוונה טבעי עבורך </h3>
                  <div class="range-slider.grad">
                 <input  type="range" value="0" min="0" max="10" class="slider" oninput="this.nextElementSibling.value = this.value" name="teaching" id="teaching">
                 <output>0</output>
                 <div id="teachingErr" class="error" ></div>
               </div>
-              <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="button" name="next" class="next action-button" value="Next"/>
+             <input type="button" name="next" class="next action-button" value="הבא"/>
+              <input type="button" name="previous" class="previous action-button-previous" value="חזור"/>
             </fieldset>
             
             
             <!-- fieldsets -->
             <fieldset>
                 <h2 class="fs-title">יכולות ניתוח והסקה</h2>
-                <h3 class="fs-subtitle">עד כעד כמה עולם התכנות שלך גבוה </h3>
+                <h3 class="fs-subtitle">באיזו מידה יכולת הסקת המסקנות שלך וניתוח גבוהה </h3>
                  <div class="range-slider.grad">
                 <input  type="range" value="0" min="0" max="10" class="slider" oninput="this.nextElementSibling.value = this.value" name="analysisCapabilities" id="analysisCapabilities">
                 <output>0</output>
-                <div id="analysisCapabilitiesErr" class="error" ></div>
+                
               </div>
               
-             <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+             <input type="button" name="next" class="next action-button" value="הבא"/>
+              <input type="button" name="previous" class="previous action-button-previous" value="חזור"/>
             </fieldset>
+            
+               <!-- fieldsets -->
+            <fieldset>
+                <h2 class="fs-title">סיום</h2>
+                <h3 class="fs-subtitle">ניתן לחזור ולשנות בכל זמן שתבחר את הערכים השונים , וכמובן שניתן לעשות את השאלון מספר פעמים שתרצו  </h3>
+            
+              
+             <input type="button" name="previous" class="previous action-button-previous" value="חזור"/>
+             <br>
+                <input type="submit" name="submit" class="submit action-button" value="שלח"/>
+            </fieldset>
+        
             </form>
         </div>
         </div> 
-        </div>
+
+        
+        
      
         <br>    <br>  <br>    <br><br><br><br>
 
@@ -285,3 +318,5 @@
 </body>
 
 </html>
+
+
