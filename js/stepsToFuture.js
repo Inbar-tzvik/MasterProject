@@ -1,21 +1,8 @@
-//function myFunction() {
-
-  //  var  SQLErr= true
-    // var  CErr= true
- //    var HTMLErr= true
-  //   var PYTHONErr= true
-//     var SAP_ERPErr= true 
-  //   var java_scriptErr= true
-   //  var UI_UXErr= true 
-   //  var Data_ScienceErr =true;
    
-   
-    
    function validateThisFrom(thisForm) {
     var name_role = document.getElementById("name_role").value;
 
  if (thisForm.name_role.value === "") {
-   //  document.getElementById("roleErr").innerHTML ="חובה לבחור תפקיד מהרשימה"; 
     alert("חובה לבחור תפקיד מהרשימה");
      thisForm.name_role.focus();
      return false;
@@ -26,109 +13,74 @@ else{
 return true;
 }
 }
-
-<<<<<<< HEAD
-	$(document).ready(function () {
-    $('.nav-tabs > li a[title]').tooltip();
-      
-    $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
-        
-        var $target = $(e.target);
-           
-        if ($target.parent().hasClass('disabled')) {
-            return false;
-        }
-    });
-      
-    $(".next-step").click(function (e) {
-      
-        var $active = $('.wizard .nav-tabs li.active');
-        $active.next().removeClass('disabled');
-        nextTab($active);
-
-        $('.wizard .nav-tabs li.active .connecting-line').css({"border-bottom-left-radius": 0, "border-top-left-radius": 0});
-
-    });
-    $(".prev-step").click(function (e) {
-
-        var $active = $('.wizard .nav-tabs li.active');
-        prevTab($active);
-        
-    });
-});
-function nextTab(elem) {
-    $(elem).next().find('a[data-toggle="tab"]').click();
-}
-function prevTab(elem) {
-    $(elem).prev().find('a[data-toggle="tab"]').click();
-}
-=======
+  
 $(document).ready(function(){
 
-var current_fs, next_fs, previous_fs; //fieldsets
-var opacity;
+var current_fs, next_fs, previous_fs;
 
-$(".next").click(function(){
+// No BACK button on first screen
+if($(".show").hasClass("first-screen")) {
+$(".prev").css({ 'display' : 'none' });
+}
 
-current_fs = $(this).parent();
-next_fs = $(this).parent().next();
+// Next button
+$(".next-button").click(function(){
 
-//Add Class Active
-$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+current_fs = $(this).parent().parent();
+next_fs = $(this).parent().parent().next();
 
-//show the next fieldset
-next_fs.show();
-//hide the current fieldset with style
-current_fs.animate({opacity: 0}, {
-step: function(now) {
-// for making fielset appear animation
-opacity = 1 - now;
+$(".prev").css({ 'display' : 'block' });
 
-current_fs.css({
-'display': 'none',
-'position': 'relative'
-});
-next_fs.css({'opacity': opacity});
-},
-duration: 600
-});
-});
+$(current_fs).removeClass("show");
+$(next_fs).addClass("show");
 
-$(".previous").click(function(){
+$("#progressbar li").eq($(".card2").index(next_fs)).addClass("active");
 
-current_fs = $(this).parent();
-previous_fs = $(this).parent().prev();
-
-//Remove class active
-$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-
-//show the previous fieldset
-previous_fs.show();
-
-//hide the current fieldset with style
-current_fs.animate({opacity: 0}, {
-step: function(now) {
-// for making fielset appear animation
-opacity = 1 - now;
+current_fs.animate({}, {
+step: function() {
 
 current_fs.css({
 'display': 'none',
 'position': 'relative'
 });
-previous_fs.css({'opacity': opacity});
-},
-duration: 600
+
+next_fs.css({
+'display': 'block'
+});
+}
 });
 });
 
-$('.radio-group .radio').click(function(){
-$(this).parent().find('.radio').removeClass('selected');
-$(this).addClass('selected');
+// Previous button
+$(".prev").click(function(){
+
+current_fs = $(".show");
+previous_fs = $(".show").prev();
+
+$(current_fs).removeClass("show");
+$(previous_fs).addClass("show");
+
+$(".prev").css({ 'display' : 'block' });
+
+if($(".show").hasClass("first-screen")) {
+$(".prev").css({ 'display' : 'none' });
+}
+
+$("#progressbar li").eq($(".card2").index(current_fs)).removeClass("active");
+
+current_fs.animate({}, {
+step: function() {
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
 });
 
-$(".submit").click(function(){
-return false;
-})
+previous_fs.css({
+'display': 'block'
+});
+}
+});
+});
 
 });
->>>>>>> 2bf3923781947d1b4c4bafb365917adb7a648c77
