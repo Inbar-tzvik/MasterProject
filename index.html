@@ -11,7 +11,8 @@ $conn = new mysqli($server_name, $username, $password, $database);
   //  die("Connection failed: " . $conn->connect_error);
 //}
 //echo "Connection successful";
-$sql = "SELECT *  FROM roles2";
+
+$sql = "SELECT name_course,COUNT(name_course) as count  FROM Courses_roles GROUP BY name_course";
 $result = mysqli_query($conn,$sql);
 ?>
 
@@ -104,6 +105,7 @@ $result = mysqli_query($conn,$sql);
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
+                        <a class="button" href="../includes/findRole.html#target">Click me!</a>
                         <a href="../includes/contact.html" class="nav-item nav-link">יצירת קשר</a>
                         <!-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">אופציה</a>
@@ -182,7 +184,7 @@ $result = mysqli_query($conn,$sql);
             <div class="container">
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
                     <p>מצב שוק</p>
-                    <h2>המפה שלפניכם מראה את ביקוש השוק לפי תחומי הידע </h2>
+                    <h2> המפה שלפניכם מראה את הביקוש בשוק לתחומי הידע השונים </h2>
                     <br> <br>
                     <div id="piechart" ></div>
 
@@ -207,7 +209,7 @@ $result = mysqli_query($conn,$sql);
                             <i  >   <img src="../images/steps.png" alt="Image" class="small-icon">
                             </i>                            </div>
                         <h3>צעדים לתפקיד הנחשק</h3>
-                        <p> בדף זה אתה בוחר את התפקיד שאתה מחפש מתוך רשימה של תפקידים ומזין את הציונים שלך בקורסים הרלוונטיים עבורך. לאחר ההזנה, המערכת מבצעת התאמה בין הציונים שהזנת לציונים שדרושים בשביל התפקיד הנבחר ותציג עבורך את הקורסים אותם אתה צריך להשלים או לשפר בהם את הציון   </p>
+                        <p> בדף זה אתה בוחר את התפקיד שאתה מחפש מתוך רשימה של קורסים ומזין את הציונים שלך בקורסים הרלוונטיים עבורך. לאחר ההזנה, המערכת מבצעת התאמה בין הציונים שהזנת לציונים שדרושים בשביל התפקיד הנבחר ותציג עבורך את הקורסים אותם אתה צריך להשלים או לשפר בהם את הציון.  </p>
 
                     </div>
                     </div>
@@ -406,7 +408,40 @@ $result = mysqli_query($conn,$sql);
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
  
-        <script type="text/javascript">
+
+<script type="text/javascript">
+   google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+            
+         function drawChart() {
+            
+             var data = google.visualization.arrayToDataTable([
+                 ['name_course', 'count'],<?php
+                 if(mysqli_num_rows($result)>0){
+                    while($row=mysqli_fetch_array($result)){
+                        echo"['".$row['name_course']."',".$row['count']."],";
+                         }
+                      }
+                    ?>
+                    ]);
+            
+            var options = {
+                   //  width: 400,
+                   // height: 240,
+             colors: ['#f7cac9', '#6f689c', '#FFDAB9', '#f3b49f', '#ff8080', '#ffb366','#d65656'],
+
+                      is3D: true
+
+                    };
+            
+          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            
+             chart.draw(data, options);
+                  }
+                </script>
+                
+                 
+        <!-- <script type="text/javascript">
             google.charts.load('current', {'packages':['corechart']});
                   google.charts.setOnLoadCallback(drawChart);
             
@@ -435,8 +470,7 @@ $result = mysqli_query($conn,$sql);
             
                     chart.draw(data, options);
                   }
-                </script>
-
+                </script> -->
 
     </body>
 </html>
