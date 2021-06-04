@@ -1,136 +1,137 @@
-
 /*custom font*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 /*basic reset*/
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    height: 100%;
-    background: white;
-    background: -webkit-linear-gradient(to left, #6441A5, #2a0845); /* Chrome 10-25, Safari 5.1-6 */
-    font-family: "Open Sans";
+  height: 100%;
+  background: white;
+  background: -webkit-linear-gradient(
+    to left,
+    #6441a5,
+    #2a0845
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  font-family: "Open Sans";
 }
 
 body {
-    font-family: montserrat, arial, verdana;
-    background: transparent;
+  font-family: montserrat, arial, verdana;
+  background: transparent;
 }
 
-.title_1{
-text-align: center;
-    
+.title_1 {
+  text-align: center;
 }
-
-
 
 /*form styles*/
 #msform {
-    text-align: center;
-    position: relative;
-    margin-top: 30px;
-   
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
 }
 
 #msform fieldset {
-    background: white;
-    border: 0 none;
-    border-radius: 0px;
-    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-    padding: 20px 30px;
-    box-sizing: border-box;
-    width: 75%;
-    height:320px;
-    margin-left: auto;
-    margin-right: auto;
+  background: white;
+  border: 0 none;
+  border-radius: 0px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 45%;
+  height: 320px;
+  margin-left: 50%;
+  margin-right: auto;
 
-
-    /*stacking fieldsets above each other*/
-    position: relative;
+  /*stacking fieldsets above each other*/
+  position: relative;
 }
-
 
 /*Hide all except first fieldset*/
 #msform fieldset:not(:first-of-type) {
-    display: none;
+  display: none;
 }
 
 /*inputs*/
-#msform input, #msform textarea {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 0px;
-    margin-bottom: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: montserrat;
-    color: #2C3E50;
-     font-size: 18px;
+#msform input,
+#msform textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2c3e50;
+  font-size: 18px;
 }
 
-#msform input:focus, #msform textarea:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    border: 1px solid #ee0979;
-    outline-width: 0;
-    transition: All 0.5s ease-in;
-    -webkit-transition: All 0.5s ease-in;
-    -moz-transition: All 0.5s ease-in;
-    -o-transition: All 0.5s ease-in;
+#msform input:focus,
+#msform textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #ee0979;
+  outline-width: 0;
+  transition: All 0.5s ease-in;
+  -webkit-transition: All 0.5s ease-in;
+  -moz-transition: All 0.5s ease-in;
+  -o-transition: All 0.5s ease-in;
 }
 
 /*buttons*/
 #msform .action-button {
-    width: 100px;
-    background: #ee0979;
-    font-weight: bold;
-    color: white;
-    border: 0 none;
-    border-radius: 25px;
-    cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 5px;
+  width: 100px;
+  background: #ba55d3;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
 }
 
-#msform .action-button:hover, #msform .action-button:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979;
+#msform .action-button:hover,
+#msform .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px black;
 }
 
 #msform .action-button-previous {
-    width: 100px;
-    background: #C5C5F1;
-    font-weight: bold;
-    color: white;
-    border: 0 none;
-    border-radius: 25px;
-    cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 5px;
+  width: 100px;
+  background: #d8bfd8;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
 }
 
-#msform .action-button-previous:hover, #msform .action-button-previous:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px black;
 }
 
 /*headings*/
 .fs-title {
-    font-size: 25px;
-    text-transform: uppercase;
-    color: #2C3E50;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    font-weight: bold;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
 }
 
 .fs-subtitle {
-    font-weight: normal;
-    font-size: 23px;
-    color: #666;
-    margin-bottom: 20px;
+  font-weight: normal;
+  font-size: 23px;
+  color: #666;
+  margin-bottom: 20px;
 }
 
 #block1 {
@@ -141,116 +142,106 @@ text-align: center;
   font-size: 40px;
   margin-left: auto;
   margin-right: auto;
-
-
 }
-
 
 .hero-image {
   width: 450px;
   margin-left: 100px;
   margin-top: 50px;
   margin-bottom: -30px;
-
 }
 
 /*progressbar*/
 #progressbar {
-	margin-bottom: 20px;
-	overflow: hidden;
-	/*CSS counters to number the steps*/
-	counter-reset: step;
-	width:1000px;
-
-
-
+  margin-bottom: 20px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+  width: 1000px;
+  margin-left: 100px;
 }
 #progressbar li {
-	list-style-type: none;
-	color: black;
-	text-transform: uppercase;
-	font-size:11px;
-	width: 10%;
-	float: right;
-	position: relative;
-
-	
+  list-style-type: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 16px;
+  width: 10%;
+  float: right;
+  position: relative;
 }
 #progressbar li:before {
-	content: counter(step);
-	counter-increment: step;
-	width: 20px;
-	line-height: 20px;
-	display: block;
-	font-size: 10px;
-	color: #333;
-	background: white;
-	border-radius: 3px;
-	margin: 0 auto 5px auto;
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #333;
+  background: #d8bfd8;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
 }
 /*progressbar connectors*/
 #progressbar li:after {
-	content: '';
-	width: 100%;
-	height: 2px;
-	background: white;
-	position: absolute;
-	left: -50%;
-	top: 9px;
-	z-index: -1; /*put it behind the numbers*/
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #d8bfd8;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1; /*put it behind the numbers*/
 }
 #progressbar li:last-child:after {
-	/*connector not needed before the first step*/
-	content: none; 
+  /*connector not needed before the first step*/
+  content: none;
 }
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
-#progressbar li.active:before,  #progressbar li.active:after{
-   background:  #ff80d5;
-	color: white;
+#progressbar li.active:before,
+#progressbar li.active:after {
+  background: #ba55d3;
+  color: white;
 }
 .loader {
- position: fixed;
- left: 0px;
- top: 0px;
- width: 100%;
- height: 100%;
- z-index: 9999;
- background: url('http://www.downgraf.com/wp-content/uploads/2014/09/01-progress.gif?e44397') 50% 50% no-repeat rgb(249,249,249);
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url("http://www.downgraf.com/wp-content/uploads/2014/09/01-progress.gif?e44397")
+    50% 50% no-repeat rgb(249, 249, 249);
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
-h4{
-     text-align: center;
-     margin-bottom:-20px;
-       margin-left: auto;
+h4 {
+  text-align: center;
+  margin-bottom: -20px;
+  margin-left: auto;
   margin-right: auto;
-    
 }
 
-.slider{
-     direction: rtl
+.slider {
+  direction: rtl;
 }
-.card{
+.card {
   width: 20%;
   /*height: 450px;*/
-margin: 30px auto;
-display:inline-block;
-
+  margin: 30px 30px auto;
+  display: inline-block;
 }
-.scrollable{
+.scrollable {
   overflow-y: auto;
-  max-height: 260px;
+  max-height: 250px;
 }
 
-
-h5{
-    color:black;
-    font-size:30px;
- 
+h5 {
+  color: black;
+  font-size: 30px;
 }
 .card-custom-img {
   height: 200px;
@@ -259,12 +250,13 @@ h5{
   background-size: cover;
   background-position: center;
   border-color: inherit;
+  background-image: url("../images/pink.jpeg");
 }
 
 /* First border-left-width setting is a fallback */
 .card-custom-img::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 161px;
   left: 0;
   width: 0;
@@ -282,6 +274,6 @@ h5{
 }
 .card-custom {
   overflow: hidden;
-  min-height: 450px;
+  min-height: 440px;
   box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
 }
