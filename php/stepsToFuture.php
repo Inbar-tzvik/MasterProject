@@ -211,60 +211,140 @@ if ($conn->query($sql) == FALSE) {
       echo "<br> ";
       echo "<p class='answer' style='color:#DB7093'> הקורסים הבאים או שהציון שלך לא מספיק עבורם או שמומלץ שתעשה את קורסים אלו</p>";
 
-      echo "<table dir='rtl' class=' center table table-bordered print '>";
-      echo "<tr>";
-      echo "<th class='text-center'>שם הקורס</th>";
-      echo  "<th class='text-center'>תיאור הקורס</th>";
-      echo "</tr>";
+
       if ($bolsql_course == false) {
 
-        echo  "<tr>";
-        echo  "<td>  sql_course </td>";
-        echo  "<td> $sql_coursedes </td>";
-        echo "</tr>";
+        echo  "<div class='card card-custom bg-white border-white border-0 check'>";
+        echo "<div class='card-custom-img' 
+                         ></div>";
+        echo  " <div class='card-body style='overflow-y: auto'>";
+        echo " <h5 class='card-title'>sql_course</h5>";
+        echo  "<div class='scrollable'>";
+        echo " <p class='card-text'>$sql_coursedes</p>";
+        echo "</div>";
+        echo "<div class='card-footer' style='background: inherit; border-color: inherit;'>";
+        echo  "<a href='#' class='btn btn-outline-secondary disabled'>למידע נוסף</a>";
+        echo  " <a href='#' class='btn btn-outline-danger disabled '>חיפוש עבודה</a>";
+        echo "  </div>";
+        //</div>
+        echo  "</div>";
+        echo  "</div>";
       }
       if ($bolHTML == false) {
 
-        echo  "<tr>";
-        echo  "<td>  HTML </td>";
-        echo  "<td> $HTMLdes </td>";
-        echo "</tr>";
+        echo  "<div class='card card-custom bg-white border-white border-0 check'>";
+        echo "<div class='card-custom-img' 
+                         ></div>";
+        echo  " <div class='card-body style='overflow-y: auto'>";
+        echo " <h5 class='card-title'> HTML</h5>";
+        echo  "<div class='scrollable'>";
+        echo " <p class='card-text'>$HTMLdes</p>";
+        echo "</div>";
+        echo "<div class='card-footer' style='background: inherit; border-color: inherit;'>";
+        echo  "<a href='#' class='btn btn-outline-secondary disabled'>למידע נוסף</a>";
+        echo  " <a href='#' class='btn btn-outline-danger disabled '>חיפוש עבודה</a>";
+        echo "  </div>";
+        //</div>
+        echo  "</div>";
+        echo  "</div>";
       }
       if ($bolPYTHON == false && $name_role != 'business_analyst') {
-        echo  "<tr>";
-        echo  "<td>  PYTHON </td>";
-        echo  "<td> $PYTHONdes </td>";
-        echo "</tr>";
+
+        echo  "<div class='card card-custom bg-white border-white border-0 check'>";
+        echo "<div class='card-custom-img' 
+                         ></div>";
+        echo  " <div class='card-body style='overflow-y: auto'>";
+        echo " <h5 class='card-title'> PYTHON</h5>";
+        echo  "<div class='scrollable'>";
+        echo " <p class='card-text'>$PYTHONdes</p>";
+        echo "</div>";
+        echo "<div class='card-footer' style='background: inherit; border-color: inherit;'>";
+        echo  "<a href='#' class='btn btn-outline-secondary disabled'>למידע נוסף</a>";
+        echo  " <a href='#' class='btn btn-outline-danger disabled '>חיפוש עבודה</a>";
+        echo "  </div>";
+        echo  "</div>";
+        echo  "</div>";
       }
       if ($bolUI_UX == false && in_array($name_role, array('            productManager', 'webDeveloper', 'UI_UX'))) {
-        echo  "<tr>";
-        echo  "<td>  UI_UX </td>";
-        echo  "<td>  $UI_UXdes </td>";
-        echo "</tr>";
+        echo  "<div class='card card-custom bg-white border-white border-0 check'>";
+        echo "<div class='card-custom-img' 
+                         ></div>";
+        echo  " <div class='card-body style='overflow-y: auto'>";
+        echo " <h5 class='card-title'> UI_UX </h5>";
+        echo  "<div class='scrollable'>";
+        echo " <p class='card-text'>$UI_UXdes</p>";
+        echo "</div>";
+        echo "<div class='card-footer' style='background: inherit; border-color: inherit;'>";
+        echo  "<a href='#' class='btn btn-outline-secondary disabled'>למידע נוסף</a>";
+        echo  " <a href='#' class='btn btn-outline-danger disabled '>חיפוש עבודה</a>";
+        echo "  </div>";
+        echo  "</div>";
+        echo  "</div>";
       }
       if ($bolSAP_ERP == false) {
-        echo  "<tr>";
-        echo  "<td>  SAP_ERP </td>";
-        echo  "<td> $SAP_ERPdes </td>";
-        echo "</tr>";
+        echo  "<div class='card card-custom bg-white border-white border-0 check'>";
+        echo "<div class='card-custom-img' 
+                         ></div>";
+        echo  " <div class='card-body style='overflow-y: auto'>";
+        echo " <h5 class='card-title'> SAP_ERP </h5>";
+        echo  "<div class='scrollable'>";
+        echo " <p class='card-text'>$SAP_ERPdes</p>";
+        echo "</div>";
+        echo "<div class='card-footer' style='background: inherit; border-color: inherit;'>";
+        echo  "<a href='#' class='btn btn-outline-secondary disabled'>למידע נוסף</a>";
+        echo  " <a href='#' class='btn btn-outline-danger disabled '>חיפוש עבודה</a>";
+        echo "  </div>";
+        echo  "</div>";
+        echo  "</div>";
       }
       if ($boljava == false) {
-        echo  "<tr>";
-        echo  "<td>  java </td>";
-        echo  "<td> $javades </td>";
-        echo "</tr>";
+        echo  "<div class='card card-custom bg-white border-white border-0 check'>";
+        echo "<div class='card-custom-img' 
+                         ></div>";
+        echo  " <div class='card-body style='overflow-y: auto'>";
+        echo " <h5 class='card-title'> java </h5>";
+        echo  "<div class='scrollable'>";
+        echo " <p class='card-text'>$javades</p>";
+        echo "</div>";
+        echo "<div class='card-footer' style='background: inherit; border-color: inherit;'>";
+        echo  "<a href='#' class='btn btn-outline-secondary disabled'>למידע נוסף</a>";
+        echo  " <a href='#' class='btn btn-outline-danger disabled '>חיפוש עבודה</a>";
+        echo "  </div>";
+        echo  "</div>";
+        echo  "</div>";
       }
       if ($bolData_Science == false && $name_role != 'analyst') {
-        echo  "<tr>";
-        echo  "<td>  Data_Science </td>";
-        echo  "<td> $Data_Sciencedes </td>";
-        echo "</tr>";
+
+        echo  "<div class='card card-custom bg-white border-white border-0 check'>";
+        echo "<div class='card-custom-img' 
+                         ></div>";
+        echo  " <div class='card-body style='overflow-y: auto'>";
+        echo " <h5 class='card-title'> Data_Science </h5>";
+        echo  "<div class='scrollable'>";
+        echo " <p class='card-text'>$Data_Sciencedes</p>";
+        echo "</div>";
+        echo "<div class='card-footer' style='background: inherit; border-color: inherit;'>";
+        echo  "<a href='#' class='btn btn-outline-secondary disabled'>למידע נוסף</a>";
+        echo  " <a href='#' class='btn btn-outline-danger disabled '>חיפוש עבודה</a>";
+        echo "  </div>";
+        echo  "</div>";
+        echo  "</div>";
       }
       if ($bolc_sharp == false) {
-        echo  "<tr>";
-        echo  "<td>  #C </td>";
-        echo  "<td> $c_sharpdes </td>";
-        echo "</tr>";
+        echo  "<div class='card card-custom bg-white border-white border-0 check'>";
+        echo "<div class='card-custom-img' 
+                         ></div>";
+        echo  " <div class='card-body style='overflow-y: auto'>";
+        echo " <h5 class='card-title'> #C</h5>";
+        echo  "<div class='scrollable'>";
+        echo " <p  class='card-text' >$c_sharpdes</p>";
+        echo "</div>";
+        echo "<div class='card-footer' style='background: inherit; border-color: inherit;'>";
+        echo  "<a href='#' class='btn btn-outline-secondary disabled'>למידע נוסף</a>";
+        echo  " <a href='#' class='btn btn-outline-danger disabled '>חיפוש עבודה</a>";
+        echo "  </div>";
+        echo  "</div>";
+        echo  "</div>";
       }
     }
   ?>
