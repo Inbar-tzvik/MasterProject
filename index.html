@@ -365,10 +365,7 @@ $result = mysqli_query($conn,$sql);
         <footer>
             <div id="footer"></div>
             </footer> 
-
-  
-            
-        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+         
 
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -419,7 +416,7 @@ $result = mysqli_query($conn,$sql);
             var options = {
                    //  width: 400,
                    // height: 240,
-             colors: ['#f7cac9', '#6f689c', '#FFDAB9', '#f3b49f', '#ff8080', '#ffb366','#d65656'],
+             colors: ['#f7cac9', '#6f689c', '#FFDAB9', '#f3b49f', '#ff8080', '#ffb366','#d65656', '#d4b498'],
 
                       is3D: true
 
@@ -431,37 +428,6 @@ $result = mysqli_query($conn,$sql);
                   }
                 </script>
                 
-                 
-        <!-- <script type="text/javascript">
-            google.charts.load('current', {'packages':['corechart']});
-                  google.charts.setOnLoadCallback(drawChart);
-            
-                  function drawChart() {
-            
-                    var data = google.visualization.arrayToDataTable([
-                      ['course', 'number'],<?php
-                      if(mysqli_num_rows($result)>0){
-                          while($row=mysqli_fetch_array($result)){
-                              echo"['".$row['course']."',".$row['number']."],";
-                         }
-                      }
-                    ?>
-                    ]);
-            
-                    var options = {
-                 //    width: 400,
-                   // height: 240,
-      
-                    colors: ['#f7cac9', '#483D8B', '#FFDAB9', '#f3b49f', '#FAEBD7'],
-                      is3D: true
-
-                    };
-            
-                    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-            
-                    chart.draw(data, options);
-                  }
-                </script> -->
-
+     
     </body>
 </html>
