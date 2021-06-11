@@ -173,7 +173,7 @@ if ($conn->query($sql) == FALSE) {
 
           <p class="answer text-center"> אין תוצאות מתאימות </p>
           <br>
-          <br>
+          <br> 
           <img src="../images/search.jpg" alt="" class="reveal img-responsive reveal-content image-center st_img bigger">
           <br>
 
@@ -221,7 +221,7 @@ if ($conn->query($sql) == FALSE) {
             (או שלא ביצעת קורסים אלו או שהציון שקיבלת בהם אינו מספק)</p>";
       
             echo "<div class='text-center'>"; 
-            if ($bolsql_course == false) {
+            if ($bolsql_course == false ) {
 
             echo  "<div class='card card-custom bg-white border-white border-0 check'>";
             echo"<div class='card-custom-img' 
@@ -238,7 +238,7 @@ if ($conn->query($sql) == FALSE) {
               echo  "</div>";
               echo  "</div>";
             }
-            if ($bolHTML == false) {
+            if ($bolHTML == false  && $name_role!='data_scientist') {
 
             echo  "<div class='card card-custom bg-white border-white border-0 check'>";
             echo"<div class='card-custom-img' 
@@ -255,7 +255,7 @@ if ($conn->query($sql) == FALSE) {
               echo  "</div>";
               echo  "</div>";
             }
-            if ($bolPYTHON == false && $name_role!='business_analyst') {
+            if ($bolPYTHON == false && $name_role!='business_analyst' && $name_role!='implements_information_systems') {
                 
             echo  "<div class='card card-custom bg-white border-white border-0 check'>";
             echo"<div class='card-custom-img' 
@@ -271,7 +271,7 @@ if ($conn->query($sql) == FALSE) {
               echo  "</div>";
               echo  "</div>";
             }
-            if ($bolUI_UX == false && in_array($name_role, array('            productManager','webDeveloper','UI_UX'))) {
+            if ($bolUI_UX == false && in_array($name_role, array('            productManager','webDeveloper','UI_UX', 'crm_developer', 'implements_information_systems'))) {
                     echo  "<div class='card card-custom bg-white border-white border-0 check'>";
             echo"<div class='card-custom-img' 
                          ></div>";
@@ -287,7 +287,7 @@ if ($conn->query($sql) == FALSE) {
               echo  "</div>";
             
             }
-            if ($bolSAP_ERP == false) {
+            if ($bolSAP_ERP == false  && !in_array($name_role, array(            'webDeveloper', 'crm_developer','implements_information_systems', 'business_analyst', 'Security_information', 'analyst_security', 'data_scientist'))) {
             echo  "<div class='card card-custom bg-white border-white border-0 check'>";
             echo"<div class='card-custom-img' 
                          ></div>";
@@ -302,7 +302,7 @@ if ($conn->query($sql) == FALSE) {
               echo  "</div>";
               echo  "</div>";
             }
-            if ($boljava == false) {
+            if ($boljava == false  && $name_role!= 'data_scientist') {
             echo  "<div class='card card-custom bg-white border-white border-0 check'>";
             echo"<div class='card-custom-img' 
                          ></div>";
@@ -318,7 +318,7 @@ if ($conn->query($sql) == FALSE) {
               echo  "</div>";
         
             }
-            if ($bolData_Science == false && $name_role!='analyst') {
+            if ($bolData_Science == false  && !in_array($name_role, array(           'crm_developer','implements_information_systems', 'Security_information', 'backend_developer', 'analyst', 'QA'))) {
                 
             echo  "<div class='card card-custom bg-white border-white border-0 check'>";
             echo"<div class='card-custom-img' 
@@ -334,7 +334,7 @@ if ($conn->query($sql) == FALSE) {
               echo  "</div>";
               echo  "</div>";
             }
-            if ($bolc_sharp == false) {
+            if ($bolc_sharp == false && !in_array($name_role, array(           'implements_information_systems','analyst', 'QA', 'erp', 'analyst_security', 'data_scientist'))) {
              echo  "<div class='card card-custom bg-white border-white border-0 check'>";
             echo"<div class='card-custom-img' 
                          ></div>";
