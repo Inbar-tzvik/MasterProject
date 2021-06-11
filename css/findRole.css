@@ -287,3 +287,13 @@ h5 {
   min-height: 440px;
   box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
 }
+
+.link1 {
+  background-color: #d9b38c;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+}
