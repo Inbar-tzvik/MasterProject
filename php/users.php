@@ -8,6 +8,10 @@ $database = "maycois_MasterProject";
 
 $conn = new mysqli($server_name, $username, $password, $database);
 
+$conn->set_charset('utf8');
+
+
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -20,7 +24,7 @@ $sql = "INSERT INTO `user_information` (`comment`, `subject`,`email`)  VALUES ( 
 
 
 //  To redirect form on a particular page
-header("Location:../index.html?status=success");
+header("Location:../includes/contact.html");
 
 
 // $conn->query($sql);

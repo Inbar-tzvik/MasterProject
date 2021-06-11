@@ -306,10 +306,6 @@ select:focus {
   }
 }
 
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
 .loader {
   position: fixed;
   left: 0px;
@@ -371,4 +367,26 @@ select:focus {
 
 input {
   text-align: center;
+}
+
+.img1 {
+  padding: 0;
+  width: 120px;
+}
+
+.img_check {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  margin-top: -85px;
+  margin-bottom: -45px;
+}
+
+.card-title {
+  font-size: 30px;
+}
+
+.card-text {
+  font-size: 20px;
 }
