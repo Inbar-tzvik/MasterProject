@@ -122,7 +122,21 @@ a:hover, a:active {
 <main>
                     <?php
                     
-                    $user_qry = "SELECT name,description from roles where ($software=roles.software or $software=roles.software+1 or $software=roles.software-1 or $software=roles.software+2 or $software=roles.software-2 ) and ($management=roles.management or $management=roles.management+1 or $management=roles.management-1 or $management=roles.management+2 or $management=roles.management-2)and ($design=roles.design or $design=roles.design+1 or $design=roles.design-1 or $design=roles.design+2 or $design=roles.design-2)and ($workInATeam=roles.workInATeam or $workInATeam=roles.workInATeam+1 or $workInATeam=roles.workInATeam-1 or $workInATeam=roles.workInATeam+2 or $workInATeam=roles.workInATeam-2)and ($umlDiagramOriented=roles.umlDiagramOriented or $umlDiagramOriented=roles.umlDiagramOriented+1 or $umlDiagramOriented=roles.umlDiagramOriented-1 or $umlDiagramOriented=roles.umlDiagramOriented+2 or $umlDiagramOriented=roles.umlDiagramOriented-2)and ($teaching=roles.teaching or $teaching=roles.teaching+1 or $teaching=roles.teaching-1 or $teaching=roles.teaching+2 or $teaching=roles.teaching-2)and ($analysisCapabilities=roles.analysisCapabilities or $analysisCapabilities=roles.analysisCapabilities+1 or $analysisCapabilities=roles.analysisCapabilities-1 or $analysisCapabilities=roles.analysisCapabilities+2 or $analysisCapabilities=roles.analysisCapabilities-2)";
+                    $user_qry = "SELECT name,description from roles where ($software=roles.software or $software=roles.software+1 
+                    or $software=roles.software-1 or $software=roles.software+2 or $software=roles.software-2 ) 
+                    and ($management=roles.management or $management=roles.management+1 or $management=roles.management-1 
+                    or $management=roles.management+2 or $management=roles.management-2)and ($design=roles.design or 
+                    $design=roles.design+1 or $design=roles.design-1 or $design=roles.design+2 or $design=roles.design-2)and
+                     ($workInATeam=roles.workInATeam or $workInATeam=roles.workInATeam+1 or $workInATeam=roles.workInATeam-1
+                      or $workInATeam=roles.workInATeam+2 or $workInATeam=roles.workInATeam-2)and
+                       ($umlDiagramOriented=roles.umlDiagramOriented or $umlDiagramOriented=roles.umlDiagramOriented+1
+                        or $umlDiagramOriented=roles.umlDiagramOriented-1 or $umlDiagramOriented=roles.umlDiagramOriented+2 
+                        or $umlDiagramOriented=roles.umlDiagramOriented-2)and ($teaching=roles.teaching or 
+                        $teaching=roles.teaching+1 or $teaching=roles.teaching-1 or $teaching=roles.teaching+2 or
+                         $teaching=roles.teaching-2)and ($analysisCapabilities=roles.analysisCapabilities or
+                          $analysisCapabilities=roles.analysisCapabilities+1 or 
+                          $analysisCapabilities=roles.analysisCapabilities-1 or $analysisCapabilities=roles.analysisCapabilities+2 
+                          or $analysisCapabilities=roles.analysisCapabilities-2)";
 
                     $user_res1 = mysqli_query($conn, $user_qry);
                     $user_res2 = mysqli_query($conn, $user_qry);
