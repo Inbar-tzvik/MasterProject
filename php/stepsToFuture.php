@@ -206,17 +206,19 @@ if ($conn->query($sql) == FALSE) {
             
      
             
-          if ($bolsql_course == true && $bolHTML == true && $bolPYTHON == true && $bolUI_UX == true &&  $bolSAP_ERP == true && $boljava == true && $bolData_Science == true && $bolc_sharp == true) {
+          if ($bolsql_course == true && ($bolHTML == true or $name_role='data_scientist') && ($bolPYTHON == true or $name_role='implements_information_systems') && ($bolUI_UX == true or  !in_array($name_role, array('productManager','webDeveloper','UI_UX', 'crm_developer', 'implements_information_systems' ))) &&  ($bolSAP_ERP == true  or in_array($name_role, array( 'webDeveloper', 'crm_developer','implements_information_systems', 'analyst_security', 'data_scientist'))) && ($boljava == true or $name_role= 'data_scientist') && ($bolData_Science == true or in_array($name_role, array('crm_developer','implements_information_systems', 'backend_developer', 'analyst', 'QA'))) && ($bolc_sharp == true or in_array($name_role, array(           'implements_information_systems','analyst', 'QA', 'erp', 'analyst_security', 'data_scientist')))) {
     
             
             echo "<br> ";
-            echo " <p class='answer' style='color:#DB7093' > אתה בדרך הנכונה ! יש לך את כל הציונים המתאימים בקורסים הנדרשים </p>";
+            echo " <p class='answer text-center' style='font-size:25px; margin-top:-120px; margin-bottom:30px;' > $name_role אתה בדרך הנכונה! יש לך את כל הציונים המתאימים בקורסים הנדרשים לתפקיד  </p>";
+            echo "<img class='img_check' src='https://media.giphy.com/media/SqfsbwxdALOQPGfrJj/giphy.gif'>";
+         
             
           } else {
             echo "<br> ";
       
             
-            echo "<p class='answer text-center scrollable' style='margin-top:-85px; font-size:25px;' >   הקורסים המוצגים לפניך הם הקורסים הנדרשים עבורך בדרך לתפקיד הנחשק
+            echo "<p class='answer text-center scrollable' style='margin-top:-85px; font-size:25px;' > $name_role  הקורסים המוצגים לפניך הם הקורסים הנדרשים עבורך בדרך לתפקיד הנחשק
             <br>
             (או שלא ביצעת קורסים אלו או שהציון שקיבלת בהם אינו מספק)</p>";
       
@@ -255,7 +257,7 @@ if ($conn->query($sql) == FALSE) {
               echo  "</div>";
               echo  "</div>";
             }
-            if ($bolPYTHON == false && $name_role!='business_analyst' && $name_role!='implements_information_systems') {
+            if ($bolPYTHON == false &&  $name_role!='implements_information_systems') {
                 
             echo  "<div class='card card-custom bg-white border-white border-0 check'>";
             echo"<div class='card-custom-img' 
@@ -287,7 +289,7 @@ if ($conn->query($sql) == FALSE) {
               echo  "</div>";
             
             }
-            if ($bolSAP_ERP == false  && !in_array($name_role, array(            'webDeveloper', 'crm_developer','implements_information_systems', 'business_analyst', 'Security_information', 'analyst_security', 'data_scientist'))) {
+            if ($bolSAP_ERP == false  && !in_array($name_role, array(            'webDeveloper', 'crm_developer','implements_information_systems', 'analyst_security', 'data_scientist'))) {
             echo  "<div class='card card-custom bg-white border-white border-0 check'>";
             echo"<div class='card-custom-img' 
                          ></div>";
@@ -318,7 +320,7 @@ if ($conn->query($sql) == FALSE) {
               echo  "</div>";
         
             }
-            if ($bolData_Science == false  && !in_array($name_role, array(           'crm_developer','implements_information_systems', 'Security_information', 'backend_developer', 'analyst', 'QA'))) {
+            if ($bolData_Science == false  && !in_array($name_role, array(           'crm_developer','implements_information_systems', 'backend_developer', 'analyst', 'QA'))) {
                 
             echo  "<div class='card card-custom bg-white border-white border-0 check'>";
             echo"<div class='card-custom-img' 
